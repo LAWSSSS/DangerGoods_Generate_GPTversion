@@ -472,13 +472,13 @@ def build_prompt(item: dict[str, Any], scale: dict[str, Any]) -> str:
         f"{cross_cap}{scale_note}Draw one whole part that meets {'both caps' if cross_cap else 'this cap'} and keeps photo-2 proportions. "
         "If either axis covers more of the frame than its cap, shrink the part until it does not.\n"
         "Size — Don't: pass either image-width cap. Don't copy photo 2's apparent size; it is a close-up and is not a ruler. "
-        f"Don't enlarge the part to fill the pile, and don't shrink it to a speck. Hiding an edge does not allow a larger body. {axis_ban}\n"
+        f"Don't enlarge the part to fill the pile, and don't shrink it to a speck. Don't zoom, crop, or move the camera closer: photo 1's framing and the surrounding scrap stay the same size. Hiding an edge does not allow a larger body. {axis_ban}\n"
         f"mm — Do: {axis_rule}{cross_bit}{extra_bit}{part_bit}\n"
         "mm — Don't: exceed any listed millimeter, enlarge a part, or invent a larger overall size.\n"
         "Wear — Do: soil the whole surface to the dirt level of the scrap it touches: brown rust on steel, grey dust packed into seams and coils, black oil smears, paint only as small dull chips.\n"
         "Wear — Don't: leave a clean, bright, glossy, or showroom patch. Don't blur the outline or bury the identifying body. Don't rust plastic. Don't turn stainless into solid red rust.\n"
-        "Place — Do: nest it so the body and its mass rest on scrap.\n"
-        "Place — Don't: float, interpenetrate, bridge a gap, or balance on a tip."
+        "Place — Do: set it down in a pocket so the underside is supported along the body, with scrap touching the whole length that faces down.\n"
+        "Place — Don't: leave a gap under the body, float it, stand it upright in a hole, bridge a gap, or balance it on a tip. Don't let a rod, plate, or beam pass through the solid body, and don't let the background show through it."
         f"{extra}"
     )
 
