@@ -39,7 +39,8 @@
         "把保护帽改成灭火器握把"
       ],
       "evidence_note": "外径 219 mm、含阀高度 1450 mm，对照 40 L 钢瓶公开参数（GB 5099）。",
-      "status": "public_specification"
+      "status": "public_specification",
+      "shape_en": "slim red cylinder, rounded shoulder, holed guard cap, straight body, round base"
     },
     {
       "id": "S02",
@@ -73,7 +74,9 @@
       ],
       "evidence_note": "相似产品替代。标称高度 280 mm、瓶体外径 81.5 mm；280 不能称为含阀总高。旋钮和阀头未核实，已移出生图约束。",
       "length_is_overall": false,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "small slim silver cylinder, black round knob, side outlet, rounded shoulder",
+      "prompt_note": "Do: keep the side outlet and rounded shoulder. Don't: a plain capsule or a big tank."
     },
     {
       "id": "S03",
@@ -106,13 +109,14 @@
       ],
       "exposure": "露出机体中段、托盘或底座边缘之一，操作杆可被遮住",
       "pose": "侧卧或斜靠，保持缩回状态；独立手柄不另生成第二个主体",
-      "prompt_note": "绿漆大面积剥落，只剩暗绿残片，螺杆和机体都是旧锈件。",
+      "prompt_note": "Do: leave only dull green chips on a rusty screw and body. Don't: fresh green paint.",
       "forbid": [
         "改成红色液压瓶式结构",
         "默认完全顶升",
         "将长手柄作为机体尺寸测量目标"
       ],
-      "evidence_note": "旧照片说明记载QL5与最低高度250mm；其它结构尺寸仍为参考设定。"
+      "evidence_note": "旧照片说明记载QL5与最低高度250mm；其它结构尺寸仍为参考设定。",
+      "shape_en": "green tapered cast body, screw and round pad, side-handle socket, ribbed round base"
     },
     {
       "id": "S04",
@@ -149,7 +153,8 @@
       ],
       "evidence_note": "相似 T83006XB。产品长 622 mm、宽 242 mm、高 158 mm；托盘最低高度取范围下限 150 mm。手柄、轮径和托盘直径未核实。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "low red wheeled frame, yellow handle, long black lever, round lift pad"
     },
     {
       "id": "S05",
@@ -184,7 +189,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "相似 600 ml 成品 280×65 mm，不是认定照片为该型号。喷盖高和卷边未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "slim red aerosol can, one-piece red cap, yellow-black label block, recessed round base"
     },
     {
       "id": "S06",
@@ -219,7 +225,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "同品牌同系列商品尺寸 280×65 mm。喷盖高和卷边未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "purple-pink slim cylinder, black angled nozzle, yellow brand block"
     },
     {
       "id": "S07",
@@ -254,7 +261,7 @@
       ],
       "exposure": "露出缸筒一段、侧油口或一个耳环",
       "pose": "缸轴沿钢件缝隙横卧或浅斜插",
-      "prompt_note": "黑漆磨掉，黄标污损，缸筒和杆布满油泥，不要新缸。",
+      "prompt_note": "Do: wear off the black paint, dirty the yellow label, and cake the barrel and rod in oil. Don't: a new cylinder.",
       "forbid": [
         "生成带弹簧减震器",
         "改成黑色喷雾瓶",
@@ -262,7 +269,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "ATO-HSG63300 主表：缩回总长 640 mm、缸筒外径 73 mm、耳孔 30 mm、外露杆 35 mm。耳环外径尺寸链有矛盾，未写入。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "long black round barrel, eye mounts at both ends, yellow label band, side port"
     },
     {
       "id": "S08",
@@ -303,7 +311,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "ATO-HSG80200 主表：缩回总长 580 mm、缸筒外径 90 mm、耳孔 40 mm、外露短杆 50 mm。油口和耳环外径未写入。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "yellow round barrel, eyes at both ends, side port, chrome rod"
     },
     {
       "id": "S09",
@@ -339,7 +348,9 @@
       ],
       "evidence_note": "相似 EXA Form 291R。只采用安装孔中心距 190 mm、安装套宽 24 mm、安装孔 8 mm。端到端总长和弹簧外径未核实。",
       "length_is_overall": false,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "short thick black coil spring, red eyes and adjuster rings, gold inner tube",
+      "prompt_note": "Do: chip the red paint and pack dust and oil into the coils, with both eyes resting in the pile. Don't: a new shock or a part spanning a gap."
     },
     {
       "id": "S10",
@@ -377,7 +388,9 @@
       ],
       "length_is_overall": false,
       "evidence_note": "相似 HAGON 配置。无载孔距 320 mm，弹簧外径约 53 mm，安装套宽 19 mm。端到端总长和内杆未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "long thin black spring, eyes at both ends, black dust boot, even coil pitch",
+      "prompt_note": "Do: dull the spring and boot with dust and oil, both ends lying on scrap. Don't: a new shock or a bridge over a hole."
     },
     {
       "id": "S12",
@@ -419,7 +432,8 @@
       ],
       "evidence_note": "采用 SN513 整组尺寸。总高 150 mm 与原值相符；底座长改为 275 mm，轴向宽 110 mm，孔距 230 mm。轴孔和螺栓头未核实。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "dark green split cap, clamp bolts, central round bore, two mounting feet"
     },
     {
       "id": "S14",
@@ -457,7 +471,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "近似 FGC1S 长款，参考图示高度约 732 mm、筒体外径 90 mm，不含原图支腿。原 700/170/120/160 未写入。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "slim stainless tube, top flange, upper side flange, bottom valve and frame stand"
     },
     {
       "id": "S15",
@@ -487,7 +502,7 @@
       ],
       "exposure": "露出蓝柄和部分六角阀体，螺纹口可被遮住",
       "pose": "阀体被小钢件夹住，手柄自然沿表面方向",
-      "prompt_note": "钢体发乌有油污擦伤，蓝柄褪色积灰，不要亮新品。",
+      "prompt_note": "Do: scratch and dull the steel, fade and dust the blue handle, and rest the body and both ends in the pile. Don't: a bright new valve or a part perched on a crest.",
       "forbid": [
         "套用DN350大阀尺寸",
         "生成法兰和大手轮",
@@ -495,7 +510,8 @@
       ],
       "evidence_note": "中驰 DN25 二片螺纹球阀。阀体端面总长 82 mm；125 mm 只是阀杆轴线到手端，不是整片手柄总长。阀体宽和含阀杆总高未核实。",
       "length_is_overall": false,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "short threaded valve body, long blue lever, female threads at both ends"
     },
     {
       "id": "S17",
@@ -523,7 +539,7 @@
       ],
       "exposure": "露出罐身色块和银色盖/罐底之一",
       "pose": "侧卧于细钢件缝隙，避免聚焦展示标签",
-      "prompt_note": "标签磨花褪色，罐身油污，银盖发乌，不要新广告罐。",
+      "prompt_note": "Do: fade and scuff the label, oil the body, and dull the cap. Don't: a new advertising can.",
       "forbid": [
         "生成600ml高杀虫罐",
         "增加灭火器软管",
@@ -531,7 +547,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "相似 400 ml 成品 200×65 mm。盖的独立高度未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "white-yellow labeled aerosol, silver plastic cap, red brand block, recessed round base"
     },
     {
       "id": "S18",
@@ -568,7 +585,8 @@
       ],
       "evidence_note": "Henry S-9109 同一目录版本：含阀总高 511 mm、筒体外径 152 mm、筒体高 430 mm。阀件高和侧接头未核实。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "slim green-blue cylinder, valves at both ends, yellow nameplate, two side ports"
     },
     {
       "id": "S19",
@@ -608,7 +626,8 @@
         "把法兰画成薄喷雾罐底"
       ],
       "evidence_note": "面对面长度取 GB/T 12221 法兰球阀短系列 457 mm，低于长系列 600 mm。法兰外径 340 mm 为 DN200、PN16。含手轮总高仍是工作估计。",
-      "status": "face_to_face_and_flange_public_height_unverified"
+      "status": "face_to_face_and_flange_public_height_unverified",
+      "shape_en": "ball center, two flanges, blue geared handwheel, two feet"
     },
     {
       "id": "S20",
@@ -647,7 +666,8 @@
         "丢掉轭架"
       ],
       "evidence_note": "面对面长度取 GB/T 12221 截止阀短系列 292 mm，低于长系列 350 mm。法兰外径 220 mm 为 DN100、PN16。含手轮总高仍是工作估计。",
-      "status": "face_to_face_and_flange_public_height_unverified"
+      "status": "face_to_face_and_flange_public_height_unverified",
+      "shape_en": "blue handwheel on a rising stem and yoke, flanges on both sides"
     },
     {
       "id": "S21",
@@ -686,7 +706,8 @@
       ],
       "evidence_note": "相似 DN350 PN16 角阀整组参数。图示状态总高 1415 mm（990+425），法兰外径 520 mm，手轮 700 mm。不再使用原先拆开的 1100/650/505/500。",
       "status": "external_reference_corrected_2026-11-24",
-      "length_is_overall": true
+      "length_is_overall": true,
+      "shape_en": "long rising stem, blue handwheel, side and downward nozzles"
     },
     {
       "id": "S22",
@@ -720,7 +741,7 @@
       ],
       "exposure": "露出银色型材、黑端盖或短杆端",
       "pose": "缸轴沿钢件间隙横放",
-      "prompt_note": "铝筒发乌有擦伤和油泥，黑端盖掉漆，铭牌污损，不要新气缸。",
+      "prompt_note": "Do: dull the aluminum with oil and scratches, chip the black caps, and dirty the plate. Don't: a new cylinder.",
       "forbid": [
         "套用125缸径的大拉杆缸尺寸",
         "改成粗钢制油缸",
@@ -728,7 +749,8 @@
       ],
       "evidence_note": "相似 SI63×100 基本型缩回总长 294 mm，端盖 75×75 mm，外露杆 20 mm。行程不作为可见长度。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "silver aluminum round tube, black square caps, rod-end nut, red-white nameplate"
     },
     {
       "id": "S23",
@@ -760,7 +782,7 @@
       ],
       "exposure": "露出缸体一段和带拉杆的端盖",
       "pose": "自然横卧，杆端不长距离悬空",
-      "prompt_note": "缸体和灰端盖是旧件，拉杆有锈和油泥，绿标发暗，不要新缸。",
+      "prompt_note": "Do: age the grey caps and barrel, rust and oil the tie rods, and dull the green mark. Don't: a new cylinder.",
       "forbid": [
         "混成黑端盖的大口径ARK缸",
         "生成液压弹簧减震器",
@@ -768,7 +790,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "相似 SC63×100 基本型缩回总长 253 mm，端盖 75×75 mm，外露杆 20 mm。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "grey square caps, four external tie rods, silver barrel, green round mark"
     },
     {
       "id": "S24",
@@ -801,7 +824,7 @@
       ],
       "exposure": "露出宽端盖与银色缸筒一段",
       "pose": "由两处钢件支撑的横卧或浅斜姿态",
-      "prompt_note": "黑端盖掉漆积尘，缸体和拉杆发乌有油泥，不要新气缸。",
+      "prompt_note": "Do: chip and dust the black caps, and dull the barrel and rods with oil. Don't: a new cylinder.",
       "forbid": [
         "按63mm小气缸尺寸生成",
         "丢失端盖宽度和粗拉杆",
@@ -809,7 +832,8 @@
       ],
       "evidence_note": "ARK 型号未确认，采用 SC125×150 相似配置。缩回总长 353 mm，端盖 136×136 mm，外露杆 32 mm。原 145 mm 行程未写入。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "wide black caps, four thick tie rods, silver barrel, blue-white nameplate, thick threaded rod end"
     },
     {
       "id": "S25",
@@ -845,7 +869,8 @@
       ],
       "evidence_note": "相似白色 PP 500 ml。含盖总高 108 mm，最大外径 95 mm。盖高未单独核实。",
       "length_is_overall": true,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "slightly tapered white plastic jar, wide flat lid, small tamper tab"
     },
     {
       "id": "S26",
@@ -884,7 +909,8 @@
         "软管僵硬悬空或生锈"
       ],
       "evidence_note": "含阀总高 500 mm、筒径 150 mm，对照 GLORIA PD6GA 说明书。",
-      "status": "public_specification"
+      "status": "public_specification",
+      "shape_en": "thick red cylinder, red handle, black curved hose, black base, white-red label"
     },
     {
       "id": "S28",
@@ -922,7 +948,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "天博 MFZ/ABC3 参考品。成品总高 400 mm，筒体外径 130 mm，筒体高 318 mm。握把、压力表和喷嘴未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "red cylinder, black handle, short nozzle, yellow safety pin, no long hose"
     },
     {
       "id": "S29",
@@ -951,7 +978,7 @@
       ],
       "exposure": "露出瓶体和托盘/底座一角，独立杆不作为第二件必投物品",
       "pose": "自然侧躺或浅斜靠，保持未伸出或轻微伸出状态",
-      "prompt_note": "完全缩回。不要伸出活塞杆，不要另画操作杆。",
+      "prompt_note": "Do: keep it fully retracted. Don't: an extended piston rod or an extra lever.",
       "forbid": [
         "改成绿色机械螺旋千斤顶",
         "生成轮式底盘",
@@ -959,7 +986,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "TORIN T91004。缩回总高取高度范围下限 230 mm，底座 123×110 mm。瓶体外径和操作杆未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "red bottle-jack body, side pump socket, round top pad, four-corner base"
     },
     {
       "id": "S30",
@@ -994,7 +1022,8 @@
       ],
       "length_is_overall": true,
       "evidence_note": "相似 3 L 绿色产品 130×420 mm。握把、软管和压力表未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "green body and handle, black hose, yellow pin, white label"
     },
     {
       "id": "S31",
@@ -1031,7 +1060,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "相似 AS DN65。本体图示高 600 mm，不含另配排水器；罐体外径 219 mm，法兰端面跨度 420 mm。法兰盘外径未单列。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "blue straight cylinder, symmetric flange pipes on both sides, top eye, bottom drain"
     },
     {
       "id": "S32",
@@ -1066,7 +1096,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "同品牌 600 ml 商品标称 280×65 mm。含喷盖口径未明确，喷盖高和卷边未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "slim blue can, one-piece blue cap, yellow brand block, recessed base"
     },
     {
       "id": "S33",
@@ -1100,7 +1131,8 @@
       ],
       "evidence_note": "CY-5-15 瓶体参考：标称高 460 mm、外径 140 mm。460 不是含调压器总高，调压器和压力表未核实。",
       "length_is_overall": false,
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "short blue cylinder, top regulator and round gauge, side knob, no large guard cap"
     },
     {
       "id": "S34",
@@ -1142,7 +1174,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "长茂 HSG125/63、500 行程。厂家未直接列总长；1072 mm 只按两耳均 R60 推算，不含顶部阀块。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "thick dark-blue barrel, heavy eyes at both ends, valve block, short chrome piston rod"
     },
     {
       "id": "S35",
@@ -1186,7 +1219,8 @@
       "status": "catalogue_reference_if_UCP210_identity_matches_not_instance_measurement",
       "sources": [
         "https://www.asahiseiko.co.jp/english/img/cata07_stand.pdf"
-      ]
+      ],
+      "shape_en": "light-blue one-piece housing, long mounting slots, silver bearing insert, top grease nipple"
     },
     {
       "id": "S36",
@@ -1224,7 +1258,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "相似 KS EXAForm A5-RE。孔距 165 mm，主气室外径约 48 mm，安装套宽约 24 mm。端到端总长未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "short black air sleeve, eyes at both ends, red valve cap, no exposed coil"
     },
     {
       "id": "S37",
@@ -1262,7 +1297,8 @@
         "增加外露弹簧",
         "改成重型液压缸"
       ],
-      "evidence_note": "具体DNM型号未确认，240/210mm为独立工作选型。"
+      "evidence_note": "具体DNM型号未确认，240/210mm为独立工作选型。",
+      "shape_en": "longer black air sleeve with an extended rod, red-blue adjusters, eyes at both ends, no exposed spring"
     },
     {
       "id": "S38",
@@ -1301,7 +1337,8 @@
       ],
       "length_is_overall": false,
       "evidence_note": "带远端调节件的 YSS 相似型号。孔距范围 315–325 mm，采用下限 315 mm。弹簧外径、端到端总长、调节头和软管未核实。",
-      "status": "external_reference_corrected_2026-11-24"
+      "status": "external_reference_corrected_2026-11-24",
+      "shape_en": "blue coil spring, black body, lower fork mount, thin hose to a blue remote adjuster"
     }
   ]
 }

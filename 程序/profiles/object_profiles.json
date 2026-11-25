@@ -49,6 +49,7 @@
         "圆肩与带开孔的保护帽",
         "平直瓶身与圆底"
       ],
+      "shape_en": "slim red cylinder, rounded shoulder, holed guard cap, straight body, round base",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -101,9 +102,10 @@
         "黑色圆旋钮",
         "侧向阀口与圆肩"
       ],
+      "shape_en": "small slim silver cylinder, black round knob, side outlet, rounded shoulder",
       "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
       "prompt_text": "",
-      "prompt_note": "",
+      "prompt_note": "Do: keep the side outlet and rounded shoulder. Don't: a plain capsule or a big tank.",
       "exposure_hint": "露出银色瓶肩、阀头或瓶身中段",
       "pose_hint": "横放并被钢件止挡，阀头与主体连成一件",
       "forbidden_changes": [
@@ -159,9 +161,10 @@
         "侧插操作杆",
         "圆形加筋底座"
       ],
+      "shape_en": "green tapered cast body, screw and round pad, side-handle socket, ribbed round base",
       "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
       "prompt_text": "",
-      "prompt_note": "绿漆大面积剥落，只剩暗绿残片，螺杆和机体都是旧锈件。",
+      "prompt_note": "Do: leave only dull green chips on a rusty screw and body. Don't: fresh green paint.",
       "exposure_hint": "露出机体中段、托盘或底座边缘之一，操作杆可被遮住",
       "pose_hint": "侧卧或斜靠，保持缩回状态；独立手柄不另生成第二个主体",
       "forbidden_changes": [
@@ -214,6 +217,7 @@
         "黑色长操作杆",
         "圆形顶升托盘"
       ],
+      "shape_en": "low red wheeled frame, yellow handle, long black lever, round lift pad",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -267,6 +271,7 @@
         "黄黑色标签块",
         "圆形内凹罐底"
       ],
+      "shape_en": "slim red aerosol can, one-piece red cap, yellow-black label block, recessed round base",
       "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
       "prompt_text": "",
       "prompt_note": "",
@@ -320,6 +325,7 @@
         "黄色品牌色块",
         "细长直圆柱"
       ],
+      "shape_en": "purple-pink slim cylinder, black angled nozzle, yellow brand block",
       "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
       "prompt_text": "",
       "prompt_note": "",
@@ -380,9 +386,10 @@
         "黄色标签环",
         "侧向油口"
       ],
+      "shape_en": "long black round barrel, eye mounts at both ends, yellow label band, side port",
       "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
       "prompt_text": "",
-      "prompt_note": "黑漆磨掉，黄标污损，缸筒和杆布满油泥，不要新缸。",
+      "prompt_note": "Do: wear off the black paint, dirty the yellow label, and cake the barrel and rod in oil. Don't: a new cylinder.",
       "exposure_hint": "露出缸筒一段、侧油口或一个耳环",
       "pose_hint": "缸轴沿钢件缝隙横卧或浅斜插",
       "forbidden_changes": [
@@ -439,6 +446,7 @@
         "侧向油口",
         "镀铬杆"
       ],
+      "shape_en": "yellow round barrel, eyes at both ends, side port, chrome rod",
       "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
       "prompt_text": "",
       "prompt_note": "",
@@ -493,9 +501,10 @@
         "红色两端耳环和调节圈",
         "金色内筒"
       ],
+      "shape_en": "short thick black coil spring, red eyes and adjuster rings, gold inner tube",
       "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
       "prompt_text": "",
-      "prompt_note": "",
+      "prompt_note": "Do: chip the red paint and pack dust and oil into the coils, with both eyes resting in the pile. Don't: a new shock or a part spanning a gap.",
       "exposure_hint": "露出连续的数圈弹簧及一个红色安装端",
       "pose_hint": "横卧或浅斜放，弹簧轴线保持连续",
       "forbidden_changes": [
@@ -549,9 +558,10 @@
         "黑色防尘护套",
         "沿轴向一致的圈距"
       ],
+      "shape_en": "long thin black spring, eyes at both ends, black dust boot, even coil pitch",
       "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
       "prompt_text": "",
-      "prompt_note": "",
+      "prompt_note": "Do: dull the spring and boot with dust and oil, both ends lying on scrap. Don't: a new shock or a bridge over a hole.",
       "exposure_hint": "露出数圈弹簧和一个端部，另一端被覆盖",
       "pose_hint": "沿条形废钢横放",
       "forbidden_changes": [
@@ -608,6 +618,7 @@
         "中部圆轴孔",
         "两侧安装脚"
       ],
+      "shape_en": "dark green split cap, clamp bolts, central round bore, two mounting feet",
       "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
       "prompt_text": "",
       "prompt_note": "",
@@ -664,6 +675,7 @@
         "上部侧向法兰管",
         "底部阀门与框形支架"
       ],
+      "shape_en": "slim stainless tube, top flange, upper side flange, bottom valve and frame stand",
       "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
       "prompt_text": "",
       "prompt_note": "",
@@ -719,9 +731,10 @@
         "两端内螺纹",
         "六视图DN25标记"
       ],
+      "shape_en": "short threaded valve body, long blue lever, female threads at both ends",
       "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
       "prompt_text": "",
-      "prompt_note": "钢体发乌有油污擦伤，蓝柄褪色积灰，不要亮新品。",
+      "prompt_note": "Do: scratch and dull the steel, fade and dust the blue handle, and rest the body and both ends in the pile. Don't: a bright new valve or a part perched on a crest.",
       "exposure_hint": "露出蓝柄和部分六角阀体，螺纹口可被遮住",
       "pose_hint": "阀体被小钢件夹住，手柄自然沿表面方向",
       "forbidden_changes": [
@@ -772,9 +785,10 @@
         "红色品牌色块",
         "圆形内凹罐底"
       ],
+      "shape_en": "white-yellow labeled aerosol, silver plastic cap, red brand block, recessed round base",
       "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
       "prompt_text": "",
-      "prompt_note": "标签磨花褪色，罐身油污，银盖发乌，不要新广告罐。",
+      "prompt_note": "Do: fade and scuff the label, oil the body, and dull the cap. Don't: a new advertising can.",
       "exposure_hint": "露出罐身色块和银色盖/罐底之一",
       "pose_hint": "侧卧于细钢件缝隙，避免聚焦展示标签",
       "forbidden_changes": [
@@ -827,6 +841,7 @@
         "黄色铭牌色块",
         "两个侧向接头"
       ],
+      "shape_en": "slim green-blue cylinder, valves at both ends, yellow nameplate, two side ports",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -885,6 +900,7 @@
         "蓝色减速手轮",
         "两条支脚"
       ],
+      "shape_en": "ball center, two flanges, blue geared handwheel, two feet",
       "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -943,6 +959,7 @@
         "双侧法兰",
         "六视图DN100字样"
       ],
+      "shape_en": "blue handwheel on a rising stem and yoke, flanges on both sides",
       "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -999,6 +1016,7 @@
         "侧向和下向接管",
         "DN350字样"
       ],
+      "shape_en": "long rising stem, blue handwheel, side and downward nozzles",
       "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1058,9 +1076,10 @@
         "杆端螺母",
         "红白铭牌块"
       ],
+      "shape_en": "silver aluminum round tube, black square caps, rod-end nut, red-white nameplate",
       "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
       "prompt_text": "",
-      "prompt_note": "铝筒发乌有擦伤和油泥，黑端盖掉漆，铭牌污损，不要新气缸。",
+      "prompt_note": "Do: dull the aluminum with oil and scratches, chip the black caps, and dirty the plate. Don't: a new cylinder.",
       "exposure_hint": "露出银色型材、黑端盖或短杆端",
       "pose_hint": "缸轴沿钢件间隙横放",
       "forbidden_changes": [
@@ -1115,9 +1134,10 @@
         "银色缸体",
         "绿色圆标"
       ],
+      "shape_en": "grey square caps, four external tie rods, silver barrel, green round mark",
       "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
       "prompt_text": "",
-      "prompt_note": "缸体和灰端盖是旧件，拉杆有锈和油泥，绿标发暗，不要新缸。",
+      "prompt_note": "Do: age the grey caps and barrel, rust and oil the tie rods, and dull the green mark. Don't: a new cylinder.",
       "exposure_hint": "露出缸体一段和带拉杆的端盖",
       "pose_hint": "自然横卧，杆端不长距离悬空",
       "forbidden_changes": [
@@ -1173,9 +1193,10 @@
         "蓝白ARK铭牌块",
         "较粗螺纹杆端"
       ],
+      "shape_en": "wide black caps, four thick tie rods, silver barrel, blue-white nameplate, thick threaded rod end",
       "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
       "prompt_text": "",
-      "prompt_note": "黑端盖掉漆积尘，缸体和拉杆发乌有油泥，不要新气缸。",
+      "prompt_note": "Do: chip and dust the black caps, and dull the barrel and rods with oil. Don't: a new cylinder.",
       "exposure_hint": "露出宽端盖与银色缸筒一段",
       "pose_hint": "由两处钢件支撑的横卧或浅斜姿态",
       "forbidden_changes": [
@@ -1226,6 +1247,7 @@
         "小防拆扣",
         "底部PP回收标记仅作材料线索"
       ],
+      "shape_en": "slightly tapered white plastic jar, wide flat lid, small tamper tab",
       "weathering_prompt": "废弃白色PP罐明显积灰、灰褐油污、黄化和擦伤，盖纹及接缝积污，反射变为旧塑料的暗哑漫反射，不能只点几处轻污后仍像白色新品。没有红褐铁锈，不变成金属罐，不无故烧熔或大面积开裂；污损色与附近废料相称。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1285,6 +1307,7 @@
         "黑色底托",
         "白红标签色块"
       ],
+      "shape_en": "thick red cylinder, red handle, black curved hose, black base, white-red label",
       "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1341,6 +1364,7 @@
         "黄色保险销",
         "无GLORIA长软管"
       ],
+      "shape_en": "red cylinder, black handle, short nozzle, yellow safety pin, no long hose",
       "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1395,9 +1419,10 @@
         "顶端圆托盘",
         "四角底座"
       ],
+      "shape_en": "red bottle-jack body, side pump socket, round top pad, four-corner base",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
-      "prompt_note": "完全缩回。不要伸出活塞杆，不要另画操作杆。",
+      "prompt_note": "Do: keep it fully retracted. Don't: an extended piston rod or an extra lever.",
       "exposure_hint": "露出瓶体和托盘/底座一角，独立杆不作为第二件必投物品",
       "pose_hint": "自然侧躺或浅斜靠，保持未伸出或轻微伸出状态",
       "forbidden_changes": [
@@ -1448,6 +1473,7 @@
         "黄保险销",
         "白色标签块"
       ],
+      "shape_en": "green body and handle, black hose, yellow pin, white label",
       "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1503,6 +1529,7 @@
         "顶部吊环",
         "底部排水器"
       ],
+      "shape_en": "blue straight cylinder, symmetric flange pipes on both sides, top eye, bottom drain",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1556,6 +1583,7 @@
         "黄色品牌色块与白花图案",
         "圆内凹罐底"
       ],
+      "shape_en": "slim blue can, one-piece blue cap, yellow brand block, recessed base",
       "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1609,6 +1637,7 @@
         "侧向旋钮",
         "无大型保护帽"
       ],
+      "shape_en": "short blue cylinder, top regulator and round gauge, side knob, no large guard cap",
       "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1668,6 +1697,7 @@
         "集成油路/阀块",
         "一段镀铬活塞杆"
       ],
+      "shape_en": "thick dark-blue barrel, heavy eyes at both ends, valve block, short chrome piston rod",
       "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1730,6 +1760,7 @@
         "银色轴承内圈",
         "顶部油嘴"
       ],
+      "shape_en": "light-blue one-piece housing, long mounting slots, silver bearing insert, top grease nipple",
       "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1786,6 +1817,7 @@
         "红色气阀帽",
         "无外露螺旋弹簧"
       ],
+      "shape_en": "short black air sleeve, eyes at both ends, red valve cap, no exposed coil",
       "weathering_prompt": "废旧空气避震以明显灰褐积尘、油泥、涂层擦伤、铝表面灰白氧化表现旧化，钢耳件和螺栓有锈斑。黑色气室呈灰暗哑光而非新品亮黑；调节钮仅保留暗淡颜色线索，禁止厚铁锈覆盖铝气室，也不增加螺旋弹簧。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1843,6 +1875,7 @@
         "两端耳环",
         "无外露弹簧"
       ],
+      "shape_en": "longer black air sleeve with an extended rod, red-blue adjusters, eyes at both ends, no exposed spring",
       "weathering_prompt": "废旧空气避震以明显灰褐积尘、油泥、涂层擦伤、铝表面灰白氧化表现旧化，钢耳件和螺栓有锈斑。黑色气室呈灰暗哑光而非新品亮黑；调节钮仅保留暗淡颜色线索，禁止厚铁锈覆盖铝气室，也不增加螺旋弹簧。",
       "prompt_text": "",
       "prompt_note": "",
@@ -1900,6 +1933,7 @@
         "下部叉形安装端",
         "细软管连接蓝色远端调节件"
       ],
+      "shape_en": "blue coil spring, black body, lower fork mount, thin hose to a blue remote adjuster",
       "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
       "prompt_text": "",
       "prompt_note": "",

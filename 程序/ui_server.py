@@ -271,14 +271,29 @@ def as_list(value) -> list[str]:
     return [text] if text else []
 
 
+DEFAULT_BUDGET_USD = 5.0
+DEFAULT_PER_IMAGE_USD = 0.05
+
+
+def money_field(raw, default: float, label: str) -> float:
+    text = "" if raw is None else str(raw).strip()
+    if not text:
+        return default
+    try:
+        value = float(text)
+    except ValueError:
+        raise ValueError(f"{label}必须是数字") from None
+    if value <= 0:
+        raise ValueError(f"{label}必须大于 0")
+    return value
+
+
 def resolve_job(body: dict, files: list[tuple[str, str, bytes]]) -> tuple[list[str], list[str], float, float | None]:
     mode = str(body.get("mode") or "pick")
-    budget = float(body.get("budget_usd"))
-    per_image = float(body.get("per_image_usd"))
-    if not 0 < budget <= 5:
-        raise ValueError("总预算必须大于 0 且不超过 5 美元")
-    if per_image <= 0 or per_image > budget:
-        raise ValueError("单张上限必须大于 0，并且不能超过总预算")
+    budget = money_field(body.get("budget_usd"), DEFAULT_BUDGET_USD, "总预算")
+    per_image = money_field(body.get("per_image_usd"), DEFAULT_PER_IMAGE_USD, "单张上限")
+    if per_image > budget:
+        raise ValueError("单张上限不能超过总预算")
     if mode == "random":
         picked = draw_random(int(body.get("background_count")), int(body.get("object_count")), str(body.get("seed") or ""))
         return picked["backgrounds"], picked["objects"], budget, per_image
@@ -332,8 +347,6 @@ def run_generation(body: dict, files: list[tuple[str, str, bytes]]) -> dict:
         raise ValueError("这个模型不接受所选画质")
     backgrounds, objects, budget, per_image = resolve_job(body, files)
     planned = len(backgrounds) * len(objects)
-    if per_image is not None and per_image * planned > budget + 1e-9:
-        raise ValueError(f"计划 {planned} 张，单张上限乘张数超过总预算")
     before = set((OUTPUT / "results").glob("*")) if (OUTPUT / "results").exists() else set()
     with tempfile.TemporaryDirectory(prefix="openai-ui-") as temporary:
         background_args = materialize_backgrounds(backgrounds, files, Path(temporary))

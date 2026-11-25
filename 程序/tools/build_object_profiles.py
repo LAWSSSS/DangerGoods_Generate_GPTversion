@@ -82,6 +82,7 @@ def build(seeds_path: Path, destination: Path) -> dict:
                 },
                 "material": material,
                 "identity_features": seed["features"],
+                "shape_en": str(seed.get("shape_en") or "").strip(),
                 "weathering_prompt": seed.get("weathering_prompt") or WEATHERING[material],
                 "prompt_text": seed.get("prompt_text") or "",
                 "prompt_note": str(seed.get("prompt_note") or "").strip(),

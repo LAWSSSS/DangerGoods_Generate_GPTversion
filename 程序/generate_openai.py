@@ -286,49 +286,199 @@ def _percent(fraction: float) -> str:
     return f"{fraction * 100:.1f}%"
 
 
+def _mm(value: Any) -> str:
+    return f"{value:g}" if isinstance(value, (int, float)) else str(value)
+
+
+DIM_EN = {
+    "上安装套宽": "upper eye width",
+    "上安装孔直径": "upper eye bore",
+    "下安装套宽": "lower eye width",
+    "下安装孔直径": "lower eye bore",
+    "两耳中心距": "eye-center distance",
+    "主气室外径": "main air-sleeve OD",
+    "产品宽": "width",
+    "产品长": "length",
+    "产品高": "height",
+    "侧手柄长": "side handle length",
+    "六视图标称通径": "marked bore",
+    "单瓶标称高": "nominal bottle height",
+    "压力表直径": "gauge diameter",
+    "参考图示高度": "shown height",
+    "可见标称通径": "marked bore",
+    "后凸台直径": "rear boss diameter",
+    "后凸台突出": "rear boss projection",
+    "含上下阀总高": "height with both valves",
+    "含喷盖总高": "height with cap",
+    "含手轮总高": "height with handwheel",
+    "含手轮支脚总高": "height with handwheel and feet",
+    "含盖总高": "height with lid",
+    "含盖成品高": "height with cap",
+    "含阀总高": "height with valve",
+    "含阀整机总高": "overall height with valve",
+    "图示状态总高": "shown overall height",
+    "外部直径": "outside diameter",
+    "外露杆直径": "exposed rod diameter",
+    "外露短杆直径": "exposed short-rod diameter",
+    "安装中心距": "mounting-center distance",
+    "安装套宽": "eye width",
+    "安装孔中心距": "eye-center distance",
+    "安装孔直径": "eye bore",
+    "安装孔距": "mounting-hole span",
+    "底座宽": "base width",
+    "底座总长": "base length",
+    "底座长": "base length",
+    "底脚厚": "foot thickness",
+    "座体轴向宽": "housing axial width",
+    "弹簧外径": "spring OD",
+    "总高": "overall height",
+    "成品单瓶高": "finished bottle height",
+    "成品外径": "finished OD",
+    "成品总高": "finished height",
+    "手轮左缘至侧法兰端面": "handwheel edge to side flange",
+    "手轮直径": "handwheel diameter",
+    "托盘最低高": "lowest pad height",
+    "托盘直径": "pad diameter",
+    "接口法兰外径": "port flange OD",
+    "接口端面跨度": "port-face span",
+    "推算总长": "derived length",
+    "握把宽": "handle width",
+    "支脚高": "foot height",
+    "无载安装孔中心距": "unloaded eye-center distance",
+    "最大外径": "max OD",
+    "最小安装孔中心距": "minimum eye-center distance",
+    "本体图示高": "shown body height",
+    "杆端耳厚": "rod-eye thickness",
+    "杆端耳外径": "rod-eye OD",
+    "标称高度": "nominal height",
+    "气室外径": "air-sleeve OD",
+    "气瓶标称高": "nominal cylinder height",
+    "法兰外径": "flange OD",
+    "法兰端面跨度": "flange-face span",
+    "活塞杆直径": "piston-rod diameter",
+    "瓶体外径": "body OD",
+    "瓶帽高": "cap height",
+    "瓶肩宽": "shoulder width",
+    "瓶身外径": "body OD",
+    "端到端长": "end-to-end length",
+    "端盖宽": "end-cap width",
+    "端盖高": "end-cap height",
+    "筒体外径": "shell OD",
+    "筒体直径": "shell diameter",
+    "筒体高度": "shell height",
+    "管路中心线至手柄顶": "centerline to handle top",
+    "缩回主体高": "retracted body height",
+    "缩回含两耳总长": "retracted length over eyes",
+    "缩回含杆端总长": "retracted length over rod end",
+    "缩回安装中心距": "retracted mounting-center distance",
+    "缩回总高": "retracted height",
+    "缸头外径": "head OD",
+    "缸底耳厚": "base-eye thickness",
+    "缸筒外径": "barrel OD",
+    "罐体外径": "can OD",
+    "耳厚": "eye thickness",
+    "耳孔直径": "eye bore",
+    "耳环孔径": "eye bore",
+    "螺旋顶杆直径": "screw diameter",
+    "软管展开长": "hose length",
+    "轴孔直径": "bore diameter",
+    "轴心高": "shaft-center height",
+    "轴承宽": "bearing width",
+    "轴线高": "axis height",
+    "钢瓶外径": "cylinder OD",
+    "阀体端面总长": "body face-to-face length",
+    "阀杆直径": "stem diameter",
+    "阀杆轴线至手柄远端": "stem axis to handle tip",
+    "面对面长": "face-to-face length",
+    "顶盖法兰外径": "top-flange OD",
+}
+
+
+def _label(name: Any) -> str:
+    text = str(name or "")
+    return DIM_EN.get(text, text)
+
+
+def _pairs(mapping: dict[str, Any]) -> str:
+    return ", ".join(f"{_label(name)} {_mm(value)}" for name, value in mapping.items())
+
+
 def prompt_body(item: dict[str, Any]) -> str:
-    """身份和旧化。填写了 prompt_text 时用用户的文本，否则用短句。"""
+    """短英文身份。填写了 prompt_text 时用用户的文本。"""
     custom = str(item.get("prompt_text") or "").strip()
     if custom:
         return custom
-    features = "；".join(item.get("identity_features") or [])
+    shape = str(item.get("shape_en") or "").strip() or ", ".join(item.get("identity_features") or [])
     note = str(item.get("prompt_note") or "").strip()
-    body = f"{features}。旧件掉漆积尘，锈污与相邻废钢一致，不要新品。"
-    return f"{body}{note}" if note else body
+    body = f"Do: {shape}. Soil it like the scrap around it. Don't: a clean, glossy, new part."
+    return f"{body} {note}" if note else body
 
 
 def build_prompt(item: dict[str, Any], scale: dict[str, Any]) -> str:
     size = object_size_mm(item)
-    dims = "，".join(f"{name}{value}" for name, value in size["dimensions_mm"].items())
-    parts = "，".join(f"{name}{value}" for name, value in size["parts_mm"].items())
     custom = str(item.get("prompt_text") or "").strip()
-    features = "、".join(item.get("identity_features") or [])
-    identity = custom or f"{features}。"
+    shape = str(item.get("shape_en") or "").strip() or ", ".join(item.get("identity_features") or [])
+    identity = custom or shape
     note = str(item.get("prompt_note") or "").strip()
+    axis_name = str(size.get("reference_axis") or "")
+    axis = _label(axis_name)
+    length = size.get("reference_length_mm")
+    cross_name = str(size.get("cross_name") or "")
+    cross_mm = size.get("cross_mm")
+    opening = f"{_percent(float(length) / HOPPER_WIDTH_MM)} of the {HOPPER_WIDTH_MM} mm opening"
+    length_cap = _percent(scale["length_fraction"])
     if size.get("length_is_overall", True):
-        length_rule = f"{size['reference_axis']}{size['reference_length_mm']}为全长，可见可更短不可更长"
+        axis_rule = f"{axis} {_mm(length)} mm is the full length."
+        axis_ban = f"Don't draw {axis} longer than {_mm(length)} mm."
     else:
-        length_rule = f"只约束{size['reference_axis']}{size['reference_length_mm']}，不是总长，禁止改大"
-    cross_rule = ""
-    if size.get("cross_name") and size.get("cross_mm") is not None:
-        cross_rule = f"。{size['cross_name']}{size['cross_mm']}，被挡只少见一段，禁止画小截面或放大整件"
-    cross_share = ""
-    if scale.get("cross_name") and scale.get("cross_fraction") is not None:
-        cross_share = f"{scale['cross_name']}画面宽={_percent(scale['cross_fraction'])}。"
+        axis_rule = (
+            f"{axis} {_mm(length)} mm is a hard cap on that axis, not permission to make the whole part longer."
+        )
+        axis_ban = "Don't use that partial axis as a reason to grow the rest of the part."
+    cross_cap = ""
+    cross_bit = ""
+    if cross_name and cross_mm is not None and scale.get("cross_fraction") is not None:
+        cross_label = _label(cross_name)
+        cross_cap = (
+            f"{cross_label} is {_mm(cross_mm)} mm, {_percent(float(cross_mm) / HOPPER_WIDTH_MM)} of the opening, "
+            f"and at most {_percent(scale['cross_fraction'])} of the image width. "
+        )
+        cross_bit = f" {cross_label} {_mm(cross_mm)} mm."
+    extra_dims = [
+        f"{_label(name)} {_mm(value)}"
+        for name, value in size["dimensions_mm"].items()
+        if name not in {axis_name, cross_name}
+    ]
+    extra_bit = f" Also {', '.join(extra_dims)}." if extra_dims else ""
+    parts = _pairs(size["parts_mm"])
+    part_bit = f" Parts, in mm: {parts}." if parts else ""
     render_scale = float(scale.get("render_scale") or 1)
-    scale_note = f"缩放{render_scale:g}已计入，禁止放大回去。" if render_scale != 1 else ""
-    part_bit = f"零件{parts}。" if parts else ""
-    extra = f"\n注：{note}" if note and note not in identity else ""
+    scale_note = (
+        f"Scale {render_scale:g} is already inside both caps; multiplying it back is a size error. "
+        if render_scale != 1
+        else ""
+    )
+    extra = f"\nNote — {note}" if note and note not in identity else ""
     return (
-        f"只在第1张加入1件旧废钢：{item['name']}（{item['id']}）。其余像素、时间戳、机位字不变。"
-        "第2张只认形状，禁止带入白底、宫格、文字、箭头、新品漆。\n"
-        f"形：{identity}实心不透明，轮廓闭合。禁止改种类、半透明、重影、虚化、融化。\n"
-        f"尺：斗内宽{HOPPER_WIDTH_MM}对应斗壁跨度{_percent(scale['hopper_span'])}。"
-        f"{scale['length_axis']}画面长≤{_percent(scale['length_fraction'])}。{cross_share}{scale_note}"
-        "按此画完整一件，禁止更大或缩成污点。六视图不提供尺度。\n"
-        f"毫米：{dims}。{part_bit}{length_rule}{cross_rule}。\n"
-        "旧：与邻接废钢同锈、同灰、同油污；原色只剩暗淡残漆。塑料只积灰。禁止新品光泽。\n"
-        "放：压在废钢上并被托住，重心在支撑内，一条边可被挡，主体可见。禁止悬空、穿模、立在尖角上。"
+        f"Add 1 scrap part to photo 1 only: {item['id']}.\n"
+        "Do: keep every other pixel, the timestamp, and the camera text.\n"
+        "Don't: change the background or add a second object.\n"
+        "Photo 2 — Do: copy only its silhouette.\n"
+        "Photo 2 — Don't: copy its backdrop, grid, text, arrows, or new paint.\n"
+        f"Shape — Do: {identity}. Solid, opaque, closed outline.\n"
+        "Shape — Don't: change the type, blur, ghost, melt, or omit a part from photo 2.\n"
+        f"Size — Do: The hopper opening is {HOPPER_WIDTH_MM} mm and covers {_percent(scale['hopper_span'])} of this image width. "
+        f"Hard cap: {axis} is {_mm(length)} mm, {opening}, and at most {length_cap} of the image width. "
+        f"{cross_cap}{scale_note}Draw one whole part that meets {'both caps' if cross_cap else 'this cap'} and keeps photo-2 proportions. "
+        "If either axis covers more of the frame than its cap, shrink the part until it does not.\n"
+        "Size — Don't: pass either image-width cap. Don't copy photo 2's apparent size; it is a close-up and is not a ruler. "
+        f"Don't enlarge the part to fill the pile, and don't shrink it to a speck. Hiding an edge does not allow a larger body. {axis_ban}\n"
+        f"mm — Do: {axis_rule}{cross_bit}{extra_bit}{part_bit}\n"
+        "mm — Don't: exceed any listed millimeter, enlarge a part, or invent a larger overall size.\n"
+        "Wear — Do: soil the whole surface to the dirt level of the scrap it touches: brown rust on steel, grey dust packed into seams and coils, black oil smears, paint only as small dull chips.\n"
+        "Wear — Don't: leave a clean, bright, glossy, or showroom patch. Don't blur the outline or bury the identifying body. Don't rust plastic. Don't turn stainless into solid red rust.\n"
+        "Place — Do: nest it so the body and its mass rest on scrap.\n"
+        "Place — Don't: float, interpenetrate, bridge a gap, or balance on a tip."
         f"{extra}"
     )
 
@@ -484,8 +634,8 @@ def main() -> int:
     if not 1 <= count <= 10:
         raise SystemExit("n 必须在 1 到 10")
     budget = float(args.budget_usd if args.budget_usd is not None else settings.get("budget_usd", 5.0))
-    if budget <= 0 or budget > 5:
-        raise SystemExit("budget-usd 必须大于 0 且不超过 5")
+    if budget <= 0:
+        raise SystemExit("budget-usd 必须大于 0")
     per_image = None if args.per_image_usd is None else float(args.per_image_usd)
     if per_image is not None and per_image <= 0:
         raise SystemExit("单张上限必须大于 0")
@@ -521,19 +671,8 @@ def main() -> int:
             for background in backgrounds
             for item_id in args.objects
         ]
-    if per_image is not None:
-        if per_image > budget + 1e-9:
-            raise SystemExit("单张上限不能超过总预算")
-        planned = per_image * len(pairs)
-        if planned > budget + 1e-9:
-            raise SystemExit(
-                f"{len(pairs)} 张 × 单张上限 {per_image:.2f} 美元 = {planned:.2f} 美元，超过总预算 {budget:.2f} 美元，已停止"
-            )
-    planned_reserve = sum(reserve_for(rank_quality) for _, _, rank_quality, _, _ in pairs)
-    if planned_reserve > budget:
-        raise SystemExit(
-            f"{len(pairs)} 次调用的预留 {planned_reserve:.2f} 美元超过预算 {budget:.2f} 美元，已停止"
-        )
+    if per_image is not None and per_image > budget + 1e-9:
+        raise SystemExit("单张上限不能超过总预算")
 
     out_dir = run_directory(args.output_root.resolve() if args.output_root else None)
     generated_dir = out_dir / "生成图"
@@ -585,14 +724,16 @@ def main() -> int:
                 "n": count,
                 "prompt": prompt,
             }
-            slot = per_image if per_image is not None else reserve_for(rank_quality)
+            hold = reserve_for(rank_quality)
+            if per_image is not None:
+                hold = min(hold, per_image)
             current = {
                 "object_id": item["id"],
                 "object_name": item["name"],
                 "background": background.name,
             }
             publish_progress(out_dir.name, total, records, spent, budget, current, True)
-            if spent + slot > budget + 1e-9:
+            if spent > 0 and spent + hold > budget + 1e-9:
                 records.append(
                     {
                         "index": None,

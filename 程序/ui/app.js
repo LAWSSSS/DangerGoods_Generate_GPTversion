@@ -180,9 +180,16 @@ function selectedNames(kind) {
   return [...source.entries()].filter(([, item]) => item.checked && item.known).map(([name]) => name);
 }
 
+function filledMoney(id, fallback) {
+  const text = $(id).value.trim();
+  if (!text) return fallback;
+  const value = Number(text);
+  return Number.isFinite(value) ? value : fallback;
+}
+
 function updateJobCount() {
-  const per = Number($("per-image").value);
-  const total = Number($("budget").value);
+  const per = filledMoney("per-image", 0.05);
+  const total = filledMoney("budget", 5);
   let count = 0;
   let label = "0 张";
   if (state.panel === "pick") {
@@ -200,8 +207,13 @@ function updateJobCount() {
       : "";
   }
   $("job-count").textContent = label;
-  const messages = ["单张上限是每一张费用的上限，不是最低消费。总预算不超过 5 美元。"];
-  if (count && per > 0) messages.push(`按上限估算最多 ${(count * per).toFixed(2)} 美元。`);
+  const messages = ["留空时总预算按 5 美元、单张上限按 0.05 美元。填写后按填写的数执行，总预算用完就停止。"];
+  if (count && per > 0) {
+    const estimate = (count * per).toFixed(2);
+    messages.push(count * per > total
+      ? `按上限估算整批最多 ${estimate} 美元，超过总预算时会生成到预算用完再停。`
+      : `按上限估算整批最多 ${estimate} 美元。`);
+  }
   if (per > total) messages.push("单张上限不能超过总预算。");
   $("budget-note").textContent = messages.join("");
 }
