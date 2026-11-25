@@ -1,0 +1,1915 @@
+{
+  "schema_version": "1.2",
+  "units": "mm",
+  "reference_root": "input/objects/six_views",
+  "frame_scale": "generate_openai.py 按车斗内宽 2500 mm 和本张斗壁跨度计算，再乘 render_scale",
+  "object_count": 34,
+  "objects": [
+    {
+      "id": "S01",
+      "name": "红色 CCS 长型工业气瓶",
+      "category": "气瓶",
+      "reference_filename": "红色 CCS 长型工业气瓶.png",
+      "reference_sha256": "94eaea1b92972cde9a6462896a6ab56594f9563ea8ee0f124107c9abd6d04cd7",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气瓶1.jpg",
+      "dimensions_mm": {
+        "总高": 1450,
+        "瓶身外径": 219
+      },
+      "parts_mm": {
+        "瓶肩宽": 140,
+        "瓶帽高": 120
+      },
+      "dimension_ranges_mm": {
+        "总高": [
+          1450,
+          1450
+        ]
+      },
+      "dimension_evidence": {
+        "status": "public_specification",
+        "sources": [],
+        "note": "外径 219 mm、含阀高度 1450 mm，对照 40 L 钢瓶公开参数（GB 5099）。"
+      },
+      "size_policy": {
+        "reference_axis": "总高",
+        "reference_length_mm": 1450,
+        "length_is_overall": true,
+        "cross_name": "瓶身外径",
+        "cross_mm": 219,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "细长红色圆柱",
+        "圆肩与带开孔的保护帽",
+        "平直瓶身与圆底"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出带曲率的瓶身一段及瓶肩/保护帽之一，不要求整瓶显露",
+      "pose_hint": "横卧或浅角度斜靠；保护帽随瓶体轴线",
+      "forbidden_changes": [
+        "按便携小气瓶尺寸生成",
+        "生成六只并排气瓶",
+        "把保护帽改成灭火器握把"
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "银色旋钮阀小型气瓶",
+      "category": "气瓶",
+      "reference_filename": "银色旋钮阀小型气瓶.png",
+      "reference_sha256": "b93d0a63c3c5e9aa6f8d3cadd61f6922a142077be5724fb6f998be1f60e9c48e",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气瓶2.jpg",
+      "dimensions_mm": {
+        "标称高度": 280,
+        "瓶体外径": 81.5
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "标称高度": [
+          280,
+          280
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似产品替代。标称高度 280 mm、瓶体外径 81.5 mm；280 不能称为含阀总高。旋钮和阀头未核实，已移出生图约束。"
+      },
+      "size_policy": {
+        "reference_axis": "标称高度",
+        "reference_length_mm": 280,
+        "length_is_overall": false,
+        "cross_name": "瓶体外径",
+        "cross_mm": 81.5,
+        "render_scale": 1.0
+      },
+      "material": "stainless_steel",
+      "identity_features": [
+        "小型银色细长瓶体",
+        "黑色圆旋钮",
+        "侧向阀口与圆肩"
+      ],
+      "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出银色瓶肩、阀头或瓶身中段",
+      "pose_hint": "横放并被钢件止挡，阀头与主体连成一件",
+      "forbidden_changes": [
+        "套用40L工业钢瓶高度",
+        "生成为大型储罐",
+        "瓶体均匀红锈"
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "绿色 QL5 螺旋千斤顶",
+      "category": "千斤顶",
+      "reference_filename": "绿色 QL5 螺旋千斤顶.png",
+      "reference_sha256": "41b108928de2c486c51c21fc3ac8def1d99137a46b96312fa5a5d512ef655702",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "千斤顶1.jpg",
+      "dimensions_mm": {
+        "缩回主体高": 250,
+        "底座长": 178,
+        "底座宽": 150
+      },
+      "parts_mm": {
+        "托盘直径": 70,
+        "螺旋顶杆直径": 50,
+        "侧手柄长": 400
+      },
+      "dimension_ranges_mm": {
+        "缩回主体高": [
+          250,
+          380
+        ]
+      },
+      "dimension_evidence": {
+        "status": "estimated_working_dimensions_not_measured",
+        "sources": [],
+        "note": "旧照片说明记载QL5与最低高度250mm；其它结构尺寸仍为参考设定。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回主体高",
+        "reference_length_mm": 250,
+        "length_is_overall": true,
+        "cross_name": "底座宽",
+        "cross_mm": 150,
+        "render_scale": 1.0
+      },
+      "material": "painted_castiron",
+      "identity_features": [
+        "绿色锥形铸造机体",
+        "机械螺杆与圆托盘",
+        "侧插操作杆",
+        "圆形加筋底座"
+      ],
+      "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
+      "prompt_text": "",
+      "prompt_note": "绿漆大面积剥落，只剩暗绿残片，螺杆和机体都是旧锈件。",
+      "exposure_hint": "露出机体中段、托盘或底座边缘之一，操作杆可被遮住",
+      "pose_hint": "侧卧或斜靠，保持缩回状态；独立手柄不另生成第二个主体",
+      "forbidden_changes": [
+        "改成红色液压瓶式结构",
+        "默认完全顶升",
+        "将长手柄作为机体尺寸测量目标"
+      ]
+    },
+    {
+      "id": "S04",
+      "name": "红黄卧式轮式液压千斤顶",
+      "category": "千斤顶",
+      "reference_filename": "红黄卧式轮式液压千斤顶.png",
+      "reference_sha256": "5328071a4877ae53132194b1b5e92706b89af0f73182f0678f060c0dd75113ba",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "千斤顶2.jpg",
+      "dimensions_mm": {
+        "产品长": 622,
+        "产品宽": 242,
+        "产品高": 158,
+        "托盘最低高": 150
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "产品长": [
+          622,
+          622
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 T83006XB。产品长 622 mm、宽 242 mm、高 158 mm；托盘最低高度取范围下限 150 mm。手柄、轮径和托盘直径未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "产品长",
+        "reference_length_mm": 622,
+        "length_is_overall": true,
+        "cross_name": "产品宽",
+        "cross_mm": 242,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "低矮红色轮式机架",
+        "黄色提手/支架",
+        "黑色长操作杆",
+        "圆形顶升托盘"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出轮组和一段机架，长操作杆可跨越并被废料遮住",
+      "pose_hint": "沿堆积面的近水平姿态；轮组/底架接触实物",
+      "forbidden_changes": [
+        "按立式瓶式千斤顶尺寸生成",
+        "额外复制手柄",
+        "把机架缩成小红瓶"
+      ]
+    },
+    {
+      "id": "S05",
+      "name": "红色 AESTAR 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "reference_filename": "红色 AESTAR 杀虫气雾罐.png",
+      "reference_sha256": "3b51fb0bb0402247bb2ed868d7456afb57f15348939c043fe32c62d1b4bced56",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "杀虫剂罐2.jpg",
+      "dimensions_mm": {
+        "成品单瓶高": 280,
+        "罐体外径": 65
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "成品单瓶高": [
+          280,
+          280
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 600 ml 成品 280×65 mm，不是认定照片为该型号。喷盖高和卷边未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "成品单瓶高",
+        "reference_length_mm": 280,
+        "length_is_overall": true,
+        "cross_name": "罐体外径",
+        "cross_mm": 65,
+        "render_scale": 1.0
+      },
+      "material": "aerosol_can",
+      "identity_features": [
+        "红色细长金属气雾罐",
+        "红色一体喷盖",
+        "黄黑色标签块",
+        "圆形内凹罐底"
+      ],
+      "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出红色罐体一段和喷盖/底部之一",
+      "pose_hint": "横卧在缝隙中，罐底与前景废料产生遮挡",
+      "forbidden_changes": [
+        "画成灭火器",
+        "增加灭火器喷管或压力表",
+        "让塑料喷盖生锈"
+      ]
+    },
+    {
+      "id": "S06",
+      "name": "紫粉色 Raid 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "reference_filename": "紫粉色 Raid 杀虫气雾罐.png",
+      "reference_sha256": "662069f8e42e0cb0b50fc0ba6c6109b9cdf6cbad3290af51b510216c919355e4",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "杀虫剂罐1.jpg",
+      "dimensions_mm": {
+        "含喷盖总高": 280,
+        "外部直径": 65
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "含喷盖总高": [
+          280,
+          280
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "同品牌同系列商品尺寸 280×65 mm。喷盖高和卷边未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "含喷盖总高",
+        "reference_length_mm": 280,
+        "length_is_overall": true,
+        "cross_name": "外部直径",
+        "cross_mm": 65,
+        "render_scale": 1.0
+      },
+      "material": "aerosol_can",
+      "identity_features": [
+        "紫粉色罐身",
+        "黑色斜口喷头",
+        "黄色品牌色块",
+        "细长直圆柱"
+      ],
+      "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出紫粉色罐身和黑色喷头的一部分",
+      "pose_hint": "侧卧或浅角度斜插，不悬浮",
+      "forbidden_changes": [
+        "改成榄菊蓝罐或AESTAR红罐",
+        "生成金属锈蚀的塑料喷头",
+        "增加软管"
+      ]
+    },
+    {
+      "id": "S07",
+      "name": "黑色黄标双耳液压缸",
+      "category": "液压缸",
+      "reference_filename": "黑色黄标双耳液压缸.png",
+      "reference_sha256": "e6b0ea89ed28ad22ebaac5058f7796b9af2717139789893a10258ea57467b9f4",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "液压缸2.jpg",
+      "dimensions_mm": {
+        "缩回含两耳总长": 640,
+        "缸筒外径": 73,
+        "缸头外径": 81
+      },
+      "parts_mm": {
+        "外露杆直径": 35,
+        "耳孔直径": 30,
+        "缩回安装中心距": 570,
+        "杆端耳厚": 36,
+        "缸底耳厚": 30
+      },
+      "dimension_ranges_mm": {
+        "缩回含两耳总长": [
+          640,
+          640
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "ATO-HSG63300 主表：缩回总长 640 mm、缸筒外径 73 mm、耳孔 30 mm、外露杆 35 mm。耳环外径尺寸链有矛盾，未写入。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回含两耳总长",
+        "reference_length_mm": 640,
+        "length_is_overall": true,
+        "cross_name": "缸筒外径",
+        "cross_mm": 73,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel_chrome",
+      "identity_features": [
+        "黑色长圆缸筒",
+        "两端安装耳环",
+        "黄色标签环",
+        "侧向油口"
+      ],
+      "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
+      "prompt_text": "",
+      "prompt_note": "黑漆磨掉，黄标污损，缸筒和杆布满油泥，不要新缸。",
+      "exposure_hint": "露出缸筒一段、侧油口或一个耳环",
+      "pose_hint": "缸轴沿钢件缝隙横卧或浅斜插",
+      "forbidden_changes": [
+        "生成带弹簧减震器",
+        "改成黑色喷雾瓶",
+        "切断耳环与缸体连接"
+      ]
+    },
+    {
+      "id": "S08",
+      "name": "黄色双耳液压缸（剖视参考）",
+      "category": "液压缸",
+      "reference_filename": "黄色双耳液压缸（剖视参考）.png",
+      "reference_sha256": "7290a81f89e40a7989b52ecaf0450ffcd1abe9529eb849ce08817e5ac2809ade",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "液压缸1.jpg",
+      "dimensions_mm": {
+        "缩回含两耳总长": 580,
+        "缸筒外径": 90,
+        "缸头外径": 100
+      },
+      "parts_mm": {
+        "耳孔直径": 40,
+        "缩回安装中心距": 500,
+        "外露短杆直径": 50,
+        "耳厚": 45
+      },
+      "dimension_ranges_mm": {
+        "缩回含两耳总长": [
+          580,
+          580
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "ATO-HSG80200 主表：缩回总长 580 mm、缸筒外径 90 mm、耳孔 40 mm、外露短杆 50 mm。油口和耳环外径未写入。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回含两耳总长",
+        "reference_length_mm": 580,
+        "length_is_overall": true,
+        "cross_name": "缸筒外径",
+        "cross_mm": 90,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel_chrome",
+      "identity_features": [
+        "黄色圆形外筒",
+        "两端耳环",
+        "侧向油口",
+        "镀铬杆"
+      ],
+      "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出黄色实体缸筒和一个安装端；参考剖视只用于理解内部结构",
+      "pose_hint": "完整实体缸筒侧卧并与钢件卡住",
+      "forbidden_changes": [
+        "复制教学剖切窗口",
+        "生成透明缸筒",
+        "增加内部零件作为第二件异物"
+      ]
+    },
+    {
+      "id": "S09",
+      "name": "红黑短型弹簧后减震器",
+      "category": "减震器",
+      "reference_filename": "红黑短型弹簧后减震器.png",
+      "reference_sha256": "966ac74bde27323cc741c31cda18f6e143496eff7f0862a73d3ba05e26c6d42f",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "液压减震器2.jpg",
+      "dimensions_mm": {
+        "安装孔中心距": 190,
+        "安装套宽": 24
+      },
+      "parts_mm": {
+        "安装孔直径": 8
+      },
+      "dimension_ranges_mm": {
+        "安装孔中心距": [
+          190,
+          190
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 EXA Form 291R。只采用安装孔中心距 190 mm、安装套宽 24 mm、安装孔 8 mm。端到端总长和弹簧外径未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "安装孔中心距",
+        "reference_length_mm": 190,
+        "length_is_overall": false,
+        "cross_name": "安装套宽",
+        "cross_mm": 24,
+        "render_scale": 1.0
+      },
+      "material": "mixed_shock",
+      "identity_features": [
+        "短粗黑色螺旋弹簧",
+        "红色两端耳环和调节圈",
+        "金色内筒"
+      ],
+      "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出连续的数圈弹簧及一个红色安装端",
+      "pose_hint": "横卧或浅斜放，弹簧轴线保持连续",
+      "forbidden_changes": [
+        "套用长型摩托车减震器长度",
+        "生成大液压缸",
+        "增殖弹簧圈或断开耳环"
+      ]
+    },
+    {
+      "id": "S10",
+      "name": "黑色长型摩托车弹簧减震器",
+      "category": "减震器",
+      "reference_filename": "黑色长型摩托车弹簧减震器.png",
+      "reference_sha256": "dcc140e00fd1878933b5fc066845f9ec64a23f3bea53e736436f5e97748922d2",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "液压减震器1.jpg",
+      "dimensions_mm": {
+        "无载安装孔中心距": 320,
+        "弹簧外径": 53
+      },
+      "parts_mm": {
+        "安装孔直径": 10,
+        "安装套宽": 19
+      },
+      "dimension_ranges_mm": {
+        "无载安装孔中心距": [
+          320,
+          320
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 HAGON 配置。无载孔距 320 mm，弹簧外径约 53 mm，安装套宽 19 mm。端到端总长和内杆未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "无载安装孔中心距",
+        "reference_length_mm": 320,
+        "length_is_overall": false,
+        "cross_name": "弹簧外径",
+        "cross_mm": 53,
+        "render_scale": 1.0
+      },
+      "material": "mixed_shock",
+      "identity_features": [
+        "细长黑色弹簧",
+        "上下耳环",
+        "黑色防尘护套",
+        "沿轴向一致的圈距"
+      ],
+      "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出数圈弹簧和一个端部，另一端被覆盖",
+      "pose_hint": "沿条形废钢横放",
+      "forbidden_changes": [
+        "改成无弹簧空气减震器",
+        "缩成短螺栓",
+        "把护套画成金属锈块"
+      ]
+    },
+    {
+      "id": "S12",
+      "name": "深绿色剖分式轴承座",
+      "category": "轴承座",
+      "reference_filename": "深绿色剖分式轴承座.png",
+      "reference_sha256": "132137215039f597f27aff3545bda13a275cb9e8c114c897a2e2482117164b72",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "a轴承座1.jpg",
+      "dimensions_mm": {
+        "底座总长": 275,
+        "座体轴向宽": 110,
+        "总高": 150,
+        "底座宽": 80
+      },
+      "parts_mm": {
+        "安装孔中心距": 230,
+        "轴线高": 80,
+        "底脚厚": 30
+      },
+      "dimension_ranges_mm": {
+        "底座总长": [
+          275,
+          275
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "采用 SN513 整组尺寸。总高 150 mm 与原值相符；底座长改为 275 mm，轴向宽 110 mm，孔距 230 mm。轴孔和螺栓头未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "底座总长",
+        "reference_length_mm": 275,
+        "length_is_overall": true,
+        "cross_name": "座体轴向宽",
+        "cross_mm": 110,
+        "render_scale": 0.8
+      },
+      "material": "painted_castiron",
+      "identity_features": [
+        "深绿色剖分上盖",
+        "两侧夹紧螺栓",
+        "中部圆轴孔",
+        "两侧安装脚"
+      ],
+      "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出上盖圆弧、轴孔边缘或一个带安装孔的脚",
+      "pose_hint": "底座压在钢板上或侧躺，保持上下盖接缝",
+      "forbidden_changes": [
+        "套用ASAHI P210一体座精确尺寸",
+        "改成螺母",
+        "生成错误的完整滚珠轴承特写"
+      ]
+    },
+    {
+      "id": "S14",
+      "name": "不锈钢立式管道过滤容器",
+      "category": "分离过滤器",
+      "reference_filename": "不锈钢立式管道过滤容器.png",
+      "reference_sha256": "03fc1ff6751852fd693ee75ca20ad741b0fbcbe6d7319baf030a6406d5273cd1",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "分离过滤器1.jpg",
+      "dimensions_mm": {
+        "参考图示高度": 732,
+        "筒体外径": 90
+      },
+      "parts_mm": {
+        "顶盖法兰外径": 185,
+        "接口端面跨度": 250
+      },
+      "dimension_ranges_mm": {
+        "参考图示高度": [
+          732,
+          732
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "近似 FGC1S 长款，参考图示高度约 732 mm、筒体外径 90 mm，不含原图支腿。原 700/170/120/160 未写入。"
+      },
+      "size_policy": {
+        "reference_axis": "参考图示高度",
+        "reference_length_mm": 732,
+        "length_is_overall": false,
+        "cross_name": "筒体外径",
+        "cross_mm": 90,
+        "render_scale": 1.0
+      },
+      "material": "stainless_steel",
+      "identity_features": [
+        "细长不锈钢筒体",
+        "顶部法兰",
+        "上部侧向法兰管",
+        "底部阀门与框形支架"
+      ],
+      "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出筒壁和侧法兰/底部支架之一",
+      "pose_hint": "筒轴沿钢件间隙横卧或浅斜靠，支架跟随主体",
+      "forbidden_changes": [
+        "画成药瓶或滤芯",
+        "丢掉侧法兰",
+        "均匀覆盖碳钢式厚红锈"
+      ]
+    },
+    {
+      "id": "S15",
+      "name": "DN25 蓝柄螺纹不锈钢球阀",
+      "category": "阀门",
+      "reference_filename": "DN25 蓝柄螺纹不锈钢球阀.png",
+      "reference_sha256": "03e7f929ebcbb5aef44dd1b9ec4777229e9a93b3b9fcc5becb279d83fc6c7138",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": null,
+      "dimensions_mm": {
+        "阀体端面总长": 82,
+        "管路中心线至手柄顶": 70
+      },
+      "parts_mm": {
+        "阀杆轴线至手柄远端": 125
+      },
+      "dimension_ranges_mm": {
+        "阀体端面总长": [
+          82,
+          82
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "中驰 DN25 二片螺纹球阀。阀体端面总长 82 mm；125 mm 只是阀杆轴线到手端，不是整片手柄总长。阀体宽和含阀杆总高未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "阀体端面总长",
+        "reference_length_mm": 82,
+        "length_is_overall": false,
+        "cross_name": "管路中心线至手柄顶",
+        "cross_mm": 70,
+        "render_scale": 0.2
+      },
+      "material": "stainless_steel",
+      "identity_features": [
+        "短螺纹阀体",
+        "蓝色长扳手柄",
+        "两端内螺纹",
+        "六视图DN25标记"
+      ],
+      "weathering_prompt": "呈现长期弃置的不锈钢旧件：镜面高光被灰尘、油膜、水垢和不均匀灰褐污层压低，表面有密集细擦伤、暗斑，焊缝/钢制紧固件可有局部锈迹或铁污染。主体仍为不锈钢，不把全部表面变成碳钢红锈；禁止均匀厚红锈。绝不保留干净银白新品和摄影棚灯条反射。塑料手柄只污旧。",
+      "prompt_text": "",
+      "prompt_note": "钢体发乌有油污擦伤，蓝柄褪色积灰，不要亮新品。",
+      "exposure_hint": "露出蓝柄和部分六角阀体，螺纹口可被遮住",
+      "pose_hint": "阀体被小钢件夹住，手柄自然沿表面方向",
+      "forbidden_changes": [
+        "套用DN350大阀尺寸",
+        "生成法兰和大手轮",
+        "把蓝色塑料护柄画成铁锈"
+      ]
+    },
+    {
+      "id": "S17",
+      "name": "保赐利 400ml 自喷漆罐",
+      "category": "自喷漆罐",
+      "reference_filename": "保赐利 400ml 自喷漆罐.png",
+      "reference_sha256": "e88d442b1240ab1d646d0406df181a020bcf1d2bfe82bc3696a24059c277122e",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "自喷漆罐.jpg",
+      "dimensions_mm": {
+        "含盖成品高": 200,
+        "成品外径": 65
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "含盖成品高": [
+          200,
+          200
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 400 ml 成品 200×65 mm。盖的独立高度未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "含盖成品高",
+        "reference_length_mm": 200,
+        "length_is_overall": true,
+        "cross_name": "成品外径",
+        "cross_mm": 65,
+        "render_scale": 1.0
+      },
+      "material": "aerosol_can",
+      "identity_features": [
+        "白黄标签气雾罐",
+        "银色塑料罩盖",
+        "红色品牌色块",
+        "圆形内凹罐底"
+      ],
+      "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
+      "prompt_text": "",
+      "prompt_note": "标签磨花褪色，罐身油污，银盖发乌，不要新广告罐。",
+      "exposure_hint": "露出罐身色块和银色盖/罐底之一",
+      "pose_hint": "侧卧于细钢件缝隙，避免聚焦展示标签",
+      "forbidden_changes": [
+        "生成600ml高杀虫罐",
+        "增加灭火器软管",
+        "让塑料盖生锈"
+      ]
+    },
+    {
+      "id": "S18",
+      "name": "青绿色立式小型压力储液罐",
+      "category": "储罐",
+      "reference_filename": "青绿色立式小型压力储液罐.png",
+      "reference_sha256": "33be479f04a8362dd478c99d06b7887b4cf39821b4327ff861a6284cc489fbfd",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "集油器2.jpg",
+      "dimensions_mm": {
+        "含上下阀总高": 511,
+        "筒体外径": 152
+      },
+      "parts_mm": {
+        "筒体高度": 430
+      },
+      "dimension_ranges_mm": {
+        "含上下阀总高": [
+          511,
+          511
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "Henry S-9109 同一目录版本：含阀总高 511 mm、筒体外径 152 mm、筒体高 430 mm。阀件高和侧接头未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "含上下阀总高",
+        "reference_length_mm": 511,
+        "length_is_overall": true,
+        "cross_name": "筒体外径",
+        "cross_mm": 152,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "青绿色细长筒体",
+        "上下阀组",
+        "黄色铭牌色块",
+        "两个侧向接头"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出青绿色筒壁和上阀/侧接头之一",
+      "pose_hint": "横卧或浅角度斜插，阀组不凭空折断",
+      "forbidden_changes": [
+        "按16cm集油杯生成",
+        "改成灭火器握把",
+        "增添人孔或支腿"
+      ]
+    },
+    {
+      "id": "S19",
+      "name": "DN200 蓝手轮双法兰球阀",
+      "category": "阀门",
+      "reference_filename": "DN200 蓝手轮双法兰球阀.png",
+      "reference_sha256": "fafbf84cf06b0e862af2900ff146f4c9d6c8c1c1991f85e287484b8b9dd98d1a",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "aDN350 球阀1.jpg",
+      "dimensions_mm": {
+        "面对面长": 457,
+        "含手轮支脚总高": 650,
+        "法兰外径": 340
+      },
+      "parts_mm": {
+        "可见标称通径": 200,
+        "手轮直径": 300,
+        "支脚高": 80
+      },
+      "dimension_ranges_mm": {
+        "含手轮支脚总高": [
+          550,
+          800
+        ]
+      },
+      "dimension_evidence": {
+        "status": "face_to_face_and_flange_public_height_unverified",
+        "sources": [],
+        "note": "面对面长度取 GB/T 12221 法兰球阀短系列 457 mm，低于长系列 600 mm。法兰外径 340 mm 为 DN200、PN16。含手轮总高仍是工作估计。"
+      },
+      "size_policy": {
+        "reference_axis": "含手轮支脚总高",
+        "reference_length_mm": 650,
+        "length_is_overall": true,
+        "cross_name": "法兰外径",
+        "cross_mm": 340,
+        "render_scale": 0.85
+      },
+      "material": "cast_steel",
+      "identity_features": [
+        "球形中部阀体",
+        "双法兰",
+        "蓝色减速手轮",
+        "两条支脚"
+      ],
+      "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出一部分球形阀体及法兰/手轮之一",
+      "pose_hint": "侧倒或斜靠粗型钢，不由细铁丝支撑",
+      "forbidden_changes": [
+        "按DN350统一尺寸生成",
+        "改成长阀杆截止阀",
+        "把法兰画成薄喷雾罐底"
+      ]
+    },
+    {
+      "id": "S20",
+      "name": "DN100 蓝手轮双法兰截止阀",
+      "category": "阀门",
+      "reference_filename": "DN100 蓝手轮双法兰截止阀.png",
+      "reference_sha256": "c3d57a77d2c2b66985bcec928dff9de913eec9736d746012a843cb22bd5acbbe",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": null,
+      "dimensions_mm": {
+        "面对面长": 292,
+        "含手轮总高": 430,
+        "法兰外径": 220
+      },
+      "parts_mm": {
+        "六视图标称通径": 100,
+        "手轮直径": 220,
+        "阀杆直径": 25
+      },
+      "dimension_ranges_mm": {
+        "含手轮总高": [
+          350,
+          550
+        ]
+      },
+      "dimension_evidence": {
+        "status": "face_to_face_and_flange_public_height_unverified",
+        "sources": [],
+        "note": "面对面长度取 GB/T 12221 截止阀短系列 292 mm，低于长系列 350 mm。法兰外径 220 mm 为 DN100、PN16。含手轮总高仍是工作估计。"
+      },
+      "size_policy": {
+        "reference_axis": "含手轮总高",
+        "reference_length_mm": 430,
+        "length_is_overall": true,
+        "cross_name": "法兰外径",
+        "cross_mm": 220,
+        "render_scale": 0.85
+      },
+      "material": "cast_steel",
+      "identity_features": [
+        "蓝色水平手轮",
+        "升降阀杆/轭架",
+        "双侧法兰",
+        "六视图DN100字样"
+      ],
+      "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出阀体、法兰或带轭架的手轮一部分",
+      "pose_hint": "侧躺于钢板或大钢件之间",
+      "forbidden_changes": [
+        "套用DN350阀尺寸",
+        "改成蓝扳手螺纹小球阀",
+        "丢掉轭架"
+      ]
+    },
+    {
+      "id": "S21",
+      "name": "DN350 蓝手轮大型角式阀",
+      "category": "阀门",
+      "reference_filename": "DN350 蓝手轮大型角式阀.png",
+      "reference_sha256": "d7e989f134883201d7cb6cc9f0230df9385c5e3e145cfc37bce966069d772589",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "aDN350 球阀.jpg",
+      "dimensions_mm": {
+        "图示状态总高": 1415,
+        "接口法兰外径": 520
+      },
+      "parts_mm": {
+        "手轮直径": 700,
+        "手轮左缘至侧法兰端面": 775
+      },
+      "dimension_ranges_mm": {
+        "图示状态总高": [
+          1415,
+          1415
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 DN350 PN16 角阀整组参数。图示状态总高 1415 mm（990+425），法兰外径 520 mm，手轮 700 mm。不再使用原先拆开的 1100/650/505/500。"
+      },
+      "size_policy": {
+        "reference_axis": "图示状态总高",
+        "reference_length_mm": 1415,
+        "length_is_overall": true,
+        "cross_name": "接口法兰外径",
+        "cross_mm": 520,
+        "render_scale": 0.9
+      },
+      "material": "cast_steel",
+      "identity_features": [
+        "较长升降阀杆",
+        "蓝色水平手轮",
+        "侧向和下向接管",
+        "DN350字样"
+      ],
+      "weathering_prompt": "报废铸钢阀门主体和法兰明显呈深褐/红褐氧化、油泥与积尘，螺栓孔和接缝积锈；银白新金属面改为失去光泽的旧钢材，蓝手轮褪色、剥漆，保留暗淡蓝色身份线索。保留厚法兰、曲面及真实接缝，不套用同一锈贴图，不仅给螺栓点几处轻锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出厚法兰、阀体弧面或长阀杆与手轮局部",
+      "pose_hint": "大型报废阀侧倒，由厚钢板/型钢承担重量",
+      "forbidden_changes": [
+        "画成小型螺纹球阀",
+        "生成不符合角式接管的双向直通球阀",
+        "细铁丝托起整个阀"
+      ]
+    },
+    {
+      "id": "S22",
+      "name": "黑端盖铝型材气缸",
+      "category": "气缸",
+      "reference_filename": "黑端盖铝型材气缸.png",
+      "reference_sha256": "33506beff8d3d7aa04c6138eb19e96e17a55700f786466b912534bc44eb10a17",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气缸2.jpg",
+      "dimensions_mm": {
+        "缩回含杆端总长": 294,
+        "端盖宽": 75,
+        "端盖高": 75
+      },
+      "parts_mm": {
+        "外露杆直径": 20,
+        "后凸台直径": 45,
+        "后凸台突出": 4,
+        "安装孔中心距": 56.5
+      },
+      "dimension_ranges_mm": {
+        "缩回含杆端总长": [
+          294,
+          294
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 SI63×100 基本型缩回总长 294 mm，端盖 75×75 mm，外露杆 20 mm。行程不作为可见长度。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回含杆端总长",
+        "reference_length_mm": 294,
+        "length_is_overall": true,
+        "cross_name": "端盖宽",
+        "cross_mm": 75,
+        "render_scale": 1.0
+      },
+      "material": "aluminium_steel",
+      "identity_features": [
+        "银色铝型材圆筒",
+        "黑色方端盖",
+        "杆端螺母",
+        "红白铭牌块"
+      ],
+      "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
+      "prompt_text": "",
+      "prompt_note": "铝筒发乌有擦伤和油泥，黑端盖掉漆，铭牌污损，不要新气缸。",
+      "exposure_hint": "露出银色型材、黑端盖或短杆端",
+      "pose_hint": "缸轴沿钢件间隙横放",
+      "forbidden_changes": [
+        "套用125缸径的大拉杆缸尺寸",
+        "改成粗钢制油缸",
+        "将铝型材涂满红锈"
+      ]
+    },
+    {
+      "id": "S23",
+      "name": "灰端盖拉杆式气动缸",
+      "category": "气缸",
+      "reference_filename": "灰端盖拉杆式气动缸.png",
+      "reference_sha256": "9dd179c9f85d118a763aab72e6fc4c45612ceb8d076405d125daccfcd6dafce2",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气缸.png",
+      "dimensions_mm": {
+        "缩回含杆端总长": 253,
+        "端盖宽": 75,
+        "端盖高": 75
+      },
+      "parts_mm": {
+        "外露杆直径": 20,
+        "安装孔中心距": 56
+      },
+      "dimension_ranges_mm": {
+        "缩回含杆端总长": [
+          253,
+          253
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 SC63×100 基本型缩回总长 253 mm，端盖 75×75 mm，外露杆 20 mm。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回含杆端总长",
+        "reference_length_mm": 253,
+        "length_is_overall": true,
+        "cross_name": "端盖宽",
+        "cross_mm": 75,
+        "render_scale": 1.0
+      },
+      "material": "aluminium_steel",
+      "identity_features": [
+        "灰色方形端盖",
+        "四根外拉杆",
+        "银色缸体",
+        "绿色圆标"
+      ],
+      "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
+      "prompt_text": "",
+      "prompt_note": "缸体和灰端盖是旧件，拉杆有锈和油泥，绿标发暗，不要新缸。",
+      "exposure_hint": "露出缸体一段和带拉杆的端盖",
+      "pose_hint": "自然横卧，杆端不长距离悬空",
+      "forbidden_changes": [
+        "混成黑端盖的大口径ARK缸",
+        "生成液压弹簧减震器",
+        "丢失拉杆结构"
+      ]
+    },
+    {
+      "id": "S24",
+      "name": "黑端盖大型 ARK 拉杆气缸",
+      "category": "气缸",
+      "reference_filename": "黑端盖大型 ARK 拉杆气缸.png",
+      "reference_sha256": "ee280e2eddf0c411d905c2581b4509f6e3f18c7b78d7d1d01f3d8b37bd6af619",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气缸1.jpg",
+      "dimensions_mm": {
+        "缩回含杆端总长": 353,
+        "端盖宽": 136,
+        "端盖高": 136
+      },
+      "parts_mm": {
+        "外露杆直径": 32,
+        "安装孔中心距": 104
+      },
+      "dimension_ranges_mm": {
+        "缩回含杆端总长": [
+          353,
+          353
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "ARK 型号未确认，采用 SC125×150 相似配置。缩回总长 353 mm，端盖 136×136 mm，外露杆 32 mm。原 145 mm 行程未写入。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回含杆端总长",
+        "reference_length_mm": 353,
+        "length_is_overall": true,
+        "cross_name": "端盖宽",
+        "cross_mm": 136,
+        "render_scale": 1.0
+      },
+      "material": "aluminium_steel",
+      "identity_features": [
+        "宽黑色端盖",
+        "四根粗外拉杆",
+        "银色缸筒",
+        "蓝白ARK铭牌块",
+        "较粗螺纹杆端"
+      ],
+      "weathering_prompt": "报废气缸铝壳明显灰暗、灰白氧化、密集擦伤并覆盖不均匀油泥积尘；钢拉杆、螺栓、安装端有清楚锈斑。活塞杆有旧油膜和弱反光，禁止干净的银亮铝型材和鲜明新品贴标，禁止把铝壳和杆统一涂成红锈。保持铝/钢/镀铬部件的材质差异。",
+      "prompt_text": "",
+      "prompt_note": "黑端盖掉漆积尘，缸体和拉杆发乌有油泥，不要新气缸。",
+      "exposure_hint": "露出宽端盖与银色缸筒一段",
+      "pose_hint": "由两处钢件支撑的横卧或浅斜姿态",
+      "forbidden_changes": [
+        "按63mm小气缸尺寸生成",
+        "丢失端盖宽度和粗拉杆",
+        "把标牌文字作为绝对外形尺寸"
+      ]
+    },
+    {
+      "id": "S25",
+      "name": "白色 PP 广口带盖圆罐",
+      "category": "密封胶罐",
+      "reference_filename": "白色 PP 广口带盖圆罐.png",
+      "reference_sha256": "75dbfb93b46dd9479e7510f506d31b3566d92bcffc01986ba1c2fb30065a99cf",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "密封胶罐.jpg",
+      "dimensions_mm": {
+        "含盖总高": 108,
+        "最大外径": 95
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "含盖总高": [
+          108,
+          108
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似白色 PP 500 ml。含盖总高 108 mm，最大外径 95 mm。盖高未单独核实。"
+      },
+      "size_policy": {
+        "reference_axis": "含盖总高",
+        "reference_length_mm": 108,
+        "length_is_overall": true,
+        "cross_name": "最大外径",
+        "cross_mm": 95,
+        "render_scale": 1.0
+      },
+      "material": "plastic_pp",
+      "identity_features": [
+        "白色略锥形塑料罐身",
+        "宽平盖",
+        "小防拆扣",
+        "底部PP回收标记仅作材料线索"
+      ],
+      "weathering_prompt": "废弃白色PP罐明显积灰、灰褐油污、黄化和擦伤，盖纹及接缝积污，反射变为旧塑料的暗哑漫反射，不能只点几处轻污后仍像白色新品。没有红褐铁锈，不变成金属罐，不无故烧熔或大面积开裂；污损色与附近废料相称。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出白色罐身的一部分和盖缘，保持一只容器",
+      "pose_hint": "侧卧或斜靠薄钢件，允许轻微擦压但不任意融化",
+      "forbidden_changes": [
+        "让塑料长红褐铁锈",
+        "改成300ml密封胶胶筒",
+        "按名称推定20L大桶",
+        "复制两只并排罐"
+      ]
+    },
+    {
+      "id": "S26",
+      "name": "GLORIA 6kg 红色带管灭火器",
+      "category": "灭火器",
+      "reference_filename": "GLORIA 6kg 红色带管灭火器.png",
+      "reference_sha256": "0ea8b13affab035088b89c671d2af901071af2b3c15162f32263f3e5e6ab5338",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "灭火器.jpg",
+      "dimensions_mm": {
+        "含阀总高": 500,
+        "筒体直径": 150
+      },
+      "parts_mm": {
+        "握把宽": 120,
+        "软管展开长": 600,
+        "压力表直径": 40
+      },
+      "dimension_ranges_mm": {
+        "含阀总高": [
+          500,
+          500
+        ]
+      },
+      "dimension_evidence": {
+        "status": "public_specification",
+        "sources": [],
+        "note": "含阀总高 500 mm、筒径 150 mm，对照 GLORIA PD6GA 说明书。"
+      },
+      "size_policy": {
+        "reference_axis": "含阀总高",
+        "reference_length_mm": 500,
+        "length_is_overall": true,
+        "cross_name": "筒体直径",
+        "cross_mm": 150,
+        "render_scale": 1.0
+      },
+      "material": "fire_extinguisher",
+      "identity_features": [
+        "粗红色圆柱",
+        "红色握把",
+        "黑色弯曲软管",
+        "黑色底托",
+        "白红标签色块"
+      ],
+      "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出粗红色筒壁和握把/软管一段",
+      "pose_hint": "侧卧或浅斜靠，软管顺重力垂落并可局部压住",
+      "forbidden_changes": [
+        "按3kg小瓶或气雾罐尺寸生成",
+        "添加多余喷管",
+        "软管僵硬悬空或生锈"
+      ]
+    },
+    {
+      "id": "S28",
+      "name": "MFZ/ABC3 红色 3kg 干粉灭火器",
+      "category": "灭火器",
+      "reference_filename": "MFZ／ABC3 红色 3kg 干粉灭火器.png",
+      "reference_sha256": "3a706420374349abea3a8cff8b8960f94d4287d0aab4ccf94346408b49348292",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "灭火器2.jpg",
+      "dimensions_mm": {
+        "含阀整机总高": 400,
+        "筒体外径": 130
+      },
+      "parts_mm": {
+        "筒体高度": 318
+      },
+      "dimension_ranges_mm": {
+        "含阀整机总高": [
+          400,
+          400
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "天博 MFZ/ABC3 参考品。成品总高 400 mm，筒体外径 130 mm，筒体高 318 mm。握把、压力表和喷嘴未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "含阀整机总高",
+        "reference_length_mm": 400,
+        "length_is_overall": true,
+        "cross_name": "筒体外径",
+        "cross_mm": 130,
+        "render_scale": 1.0
+      },
+      "material": "fire_extinguisher",
+      "identity_features": [
+        "红色筒体",
+        "黑色握把",
+        "短喷嘴",
+        "黄色保险销",
+        "无GLORIA长软管"
+      ],
+      "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出红色筒壁或阀头附近",
+      "pose_hint": "横卧于缝隙，不直立在废钢顶上做产品展示",
+      "forbidden_changes": [
+        "套用6kg大灭火器尺寸",
+        "额外加长软管",
+        "改成绿色水基型"
+      ]
+    },
+    {
+      "id": "S29",
+      "name": "红色 10t 瓶式液压千斤顶",
+      "category": "千斤顶",
+      "reference_filename": "红色 10t 瓶式液压千斤顶.png",
+      "reference_sha256": "d21cebc1ef8ddfe91959c39760bdbaa4da0e453abac0804c0d87aaf88edb414c",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "千斤顶.jpg",
+      "dimensions_mm": {
+        "缩回总高": 230,
+        "底座长": 123,
+        "底座宽": 110
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "缩回总高": [
+          230,
+          230
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "TORIN T91004。缩回总高取高度范围下限 230 mm，底座 123×110 mm。瓶体外径和操作杆未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "缩回总高",
+        "reference_length_mm": 230,
+        "length_is_overall": true,
+        "cross_name": "底座长",
+        "cross_mm": 123,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "红色瓶式机体",
+        "侧向泵柄插座",
+        "顶端圆托盘",
+        "四角底座"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "完全缩回。不要伸出活塞杆，不要另画操作杆。",
+      "exposure_hint": "露出瓶体和托盘/底座一角，独立杆不作为第二件必投物品",
+      "pose_hint": "自然侧躺或浅斜靠，保持未伸出或轻微伸出状态",
+      "forbidden_changes": [
+        "改成绿色机械螺旋千斤顶",
+        "生成轮式底盘",
+        "把独立操作杆纳入主体可见长度"
+      ]
+    },
+    {
+      "id": "S30",
+      "name": "绿色 3L 水基灭火器",
+      "category": "灭火器",
+      "reference_filename": "绿色 3L 水基灭火器.png",
+      "reference_sha256": "2ab6641f322fb308e5f3e0f9c5cb6cc9e3f7acdcbb44d0fefe4ab31c171b9cee",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "灭火器1.jpg",
+      "dimensions_mm": {
+        "成品总高": 420,
+        "筒体外径": 130
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "成品总高": [
+          420,
+          420
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 3 L 绿色产品 130×420 mm。握把、软管和压力表未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "成品总高",
+        "reference_length_mm": 420,
+        "length_is_overall": true,
+        "cross_name": "筒体外径",
+        "cross_mm": 130,
+        "render_scale": 1.0
+      },
+      "material": "fire_extinguisher",
+      "identity_features": [
+        "绿色筒体和握把",
+        "黑色软管",
+        "黄保险销",
+        "白色标签块"
+      ],
+      "weathering_prompt": "报废灭火器筒体明显褪色、大片擦伤掉漆，裸钢有清楚可辨的褐色锈蚀、接缝流痕和灰尘油泥；红/绿原漆仅保留暗淡旧色块，标签污损模糊，不能保留亮丽洁净的新筒体。金属握把和连接件可锈蚀，橡胶软管只沾灰油并自然弯曲，不生铁锈，不新增喷射烟雾。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出绿色筒壁、握把或一段黑软管",
+      "pose_hint": "侧卧并被废钢卡住，软管自然弯曲",
+      "forbidden_changes": [
+        "自动改成红色干粉瓶",
+        "按气雾罐大小生成",
+        "让黑色橡胶软管出现铁锈"
+      ]
+    },
+    {
+      "id": "S31",
+      "name": "蓝色双法兰气液分离罐",
+      "category": "分离过滤器",
+      "reference_filename": "蓝色双法兰气液分离罐.png",
+      "reference_sha256": "52ed638397205f79746f1649f355791e781ffa39062fba968bccf920e1598a18",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "分离过滤器.jpg",
+      "dimensions_mm": {
+        "本体图示高": 600,
+        "罐体外径": 219
+      },
+      "parts_mm": {
+        "法兰端面跨度": 420
+      },
+      "dimension_ranges_mm": {
+        "本体图示高": [
+          600,
+          600
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 AS DN65。本体图示高 600 mm，不含另配排水器；罐体外径 219 mm，法兰端面跨度 420 mm。法兰盘外径未单列。"
+      },
+      "size_policy": {
+        "reference_axis": "本体图示高",
+        "reference_length_mm": 600,
+        "length_is_overall": false,
+        "cross_name": "罐体外径",
+        "cross_mm": 219,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "蓝色直圆筒",
+        "两侧对称法兰管",
+        "顶部吊环",
+        "底部排水器"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出蓝色筒壁与侧法兰/底排水器之一",
+      "pose_hint": "沿钢件斜靠或侧卧，法兰口和筒体保持刚性连接",
+      "forbidden_changes": [
+        "画成小滤芯或集油杯",
+        "增加灭火器握把",
+        "把两侧法兰变成软管"
+      ]
+    },
+    {
+      "id": "S32",
+      "name": "蓝色榄菊 600ml 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "reference_filename": "蓝色榄菊 600ml 杀虫气雾罐.png",
+      "reference_sha256": "f3fa6f6483fc842f69b63c41f8b685930833e1fe8880bdc8b99e6448c30dead0",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "杀虫剂罐.jpg",
+      "dimensions_mm": {
+        "单瓶标称高": 280,
+        "罐体外径": 65
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "单瓶标称高": [
+          280,
+          280
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "同品牌 600 ml 商品标称 280×65 mm。含喷盖口径未明确，喷盖高和卷边未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "单瓶标称高",
+        "reference_length_mm": 280,
+        "length_is_overall": false,
+        "cross_name": "罐体外径",
+        "cross_mm": 65,
+        "render_scale": 1.0
+      },
+      "material": "aerosol_can",
+      "identity_features": [
+        "蓝色细长罐身",
+        "一体蓝色喷盖",
+        "黄色品牌色块与白花图案",
+        "圆内凹罐底"
+      ],
+      "weathering_prompt": "报废薄壁气雾罐应明显污旧：印刷褪色磨花、标签残损，表面附着灰褐粉尘和油污，钢制罐在掉漆、划伤、卷边处有清楚的不规则氧化/锈斑。保留弱化的主色与结构线索，禁止亮丽完整广告罐和可读新品印刷。塑料罩盖/喷头只积灰黄化擦伤、不生铁锈，薄壁结构不能被画成厚铸铁。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出蓝色罐体和喷盖/罐底一部分",
+      "pose_hint": "自然横卧或浅斜嵌入，尺寸仍为家用气雾罐",
+      "forbidden_changes": [
+        "画成蓝色工业钢瓶",
+        "改成红色或紫色杀虫罐",
+        "增加压力表和调压器"
+      ]
+    },
+    {
+      "id": "S33",
+      "name": "带调压器蓝色便携气瓶",
+      "category": "气瓶",
+      "reference_filename": "带调压器蓝色便携气瓶.png",
+      "reference_sha256": "db523981aaa81e97f9dc260920408806e6cf0512320cd95d6330078a8bcec8f7",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": null,
+      "dimensions_mm": {
+        "气瓶标称高": 460,
+        "钢瓶外径": 140
+      },
+      "parts_mm": {},
+      "dimension_ranges_mm": {
+        "气瓶标称高": [
+          460,
+          460
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "CY-5-15 瓶体参考：标称高 460 mm、外径 140 mm。460 不是含调压器总高，调压器和压力表未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "气瓶标称高",
+        "reference_length_mm": 460,
+        "length_is_overall": false,
+        "cross_name": "钢瓶外径",
+        "cross_mm": 140,
+        "render_scale": 1.0
+      },
+      "material": "painted_steel",
+      "identity_features": [
+        "蓝色中短瓶体",
+        "顶部调压器和圆压力表",
+        "侧向旋钮",
+        "无大型保护帽"
+      ],
+      "weathering_prompt": "明确呈现与当前废钢堆相称的报废钢件：可见钢主体主要为深褐锈、灰褐尘土和旧油泥，原漆仅作约10–20%的暗淡碎片残留；此为合成外观目标，不是实测腐蚀面积。裸钢有不规则锈层、点蚀和接缝积锈，大片剥漆，不保留完整红/蓝/绿大色块或亮漆高光。不能只加几个锈点。锈纹沿材质、磕碰和水路分布，不均匀喷成橙色。塑料旋钮/标牌不生铁锈。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出瓶肩/瓶身和调压器或压力表局部",
+      "pose_hint": "瓶体侧卧或斜靠，阀组不悬浮分离",
+      "forbidden_changes": [
+        "按40L长工业气瓶生成",
+        "改成灭火器",
+        "从多瓶拼图复制六个实例"
+      ]
+    },
+    {
+      "id": "S34",
+      "name": "深蓝色重型双耳液压油缸",
+      "category": "油缸",
+      "reference_filename": "深蓝色重型双耳液压油缸.png",
+      "reference_sha256": "2fba6e91eb2d3e0683d83f853632aadb719744952028edcb771b04c551df4d12",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "油缸.jpg",
+      "dimensions_mm": {
+        "推算总长": 1072,
+        "缸筒外径": 152
+      },
+      "parts_mm": {
+        "外露杆直径": 63,
+        "耳孔直径": 50,
+        "杆端耳外径": 120,
+        "杆端耳厚": 60,
+        "两耳中心距": 952
+      },
+      "dimension_ranges_mm": {
+        "推算总长": [
+          1072,
+          1072
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "长茂 HSG125/63、500 行程。厂家未直接列总长；1072 mm 只按两耳均 R60 推算，不含顶部阀块。"
+      },
+      "size_policy": {
+        "reference_axis": "推算总长",
+        "reference_length_mm": 1072,
+        "length_is_overall": false,
+        "cross_name": "缸筒外径",
+        "cross_mm": 152,
+        "render_scale": 0.64
+      },
+      "material": "painted_steel_chrome",
+      "identity_features": [
+        "深蓝色厚缸筒",
+        "两端粗耳环",
+        "集成油路/阀块",
+        "一段镀铬活塞杆"
+      ],
+      "weathering_prompt": "报废液压钢缸外壳明显剥漆、锈蚀、油泥和积尘，钢耳环/油口凹处有深褐锈与污垢，原漆暗淡残留。镀铬杆有旧油膜、细擦痕和局部暗斑，只保留弱金属反光，不整根涂成橙锈；禁止干净亮漆缸筒、亮银镜面活塞杆和新品黄标。保持缸筒厚度及机械连接。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出粗蓝色筒壁、油路块或一个大耳环",
+      "pose_hint": "由大块钢件两点支撑，近水平或浅斜靠",
+      "forbidden_changes": [
+        "缩成短套筒或喷漆罐",
+        "丢掉油路块",
+        "杆径按可见段长度同比变细"
+      ]
+    },
+    {
+      "id": "S35",
+      "name": "ASAHI P210 立式带座轴承",
+      "category": "轴承座",
+      "reference_filename": "ASAHI P210 立式带座轴承.png",
+      "reference_sha256": "5fa3a3c669a60e8f4c2deb0e54d6f484e088e9e78c683bde22f9cf76233731a6",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "a轴承座.jpg",
+      "dimensions_mm": {
+        "底座长": 206,
+        "底座宽": 60,
+        "总高": 114
+      },
+      "parts_mm": {
+        "轴孔直径": 50,
+        "轴心高": 57.2,
+        "安装孔距": 159,
+        "轴承宽": 51.6
+      },
+      "dimension_ranges_mm": {
+        "底座长": [
+          206,
+          206
+        ]
+      },
+      "dimension_evidence": {
+        "status": "catalogue_reference_if_UCP210_identity_matches_not_instance_measurement",
+        "sources": [
+          "https://www.asahiseiko.co.jp/english/img/cata07_stand.pdf"
+        ],
+        "note": "工作值取自既有说明和参考外形，具体实例尺寸尚未实测确认。"
+      },
+      "size_policy": {
+        "reference_axis": "底座长",
+        "reference_length_mm": 206,
+        "length_is_overall": true,
+        "cross_name": "总高",
+        "cross_mm": 114,
+        "render_scale": 0.28
+      },
+      "material": "painted_castiron",
+      "identity_features": [
+        "浅蓝色一体座体",
+        "P210和ASAHI可见型号线索",
+        "两侧长安装孔",
+        "银色轴承内圈",
+        "顶部油嘴"
+      ],
+      "weathering_prompt": "报废铸铁件的可见外壳明显氧化、漆膜剥落，深褐锈层与铸造粗糙度相互叠加，凹槽积尘油泥，底脚、孔边及螺栓有锈蚀；原色只留下暗淡残漆。受力面可局部擦亮但不能形成干净的新品反光，禁止仅在角落添几处轻微磨痕。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出轴孔/座体圆弧和一个带孔安装脚",
+      "pose_hint": "底座接触钢板或侧放，内圈不脱离座体",
+      "forbidden_changes": [
+        "按大型阀门大小生成",
+        "把座孔变成螺母孔",
+        "画成深绿色剖分上盖座"
+      ]
+    },
+    {
+      "id": "S36",
+      "name": "黑色 AERO 短型空气后减震器",
+      "category": "减震器",
+      "reference_filename": "黑色 AERO 短型空气后减震器.png",
+      "reference_sha256": "05a49a00bfb9ba988c9e64b4197a062029c59b625d2010f36daab00c0104e5e8",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气压减震器.jpg",
+      "dimensions_mm": {
+        "安装孔中心距": 165,
+        "主气室外径": 48
+      },
+      "parts_mm": {
+        "安装孔直径": 8,
+        "安装套宽": 24
+      },
+      "dimension_ranges_mm": {
+        "安装孔中心距": [
+          165,
+          165
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "相似 KS EXAForm A5-RE。孔距 165 mm，主气室外径约 48 mm，安装套宽约 24 mm。端到端总长未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "安装孔中心距",
+        "reference_length_mm": 165,
+        "length_is_overall": false,
+        "cross_name": "主气室外径",
+        "cross_mm": 48,
+        "render_scale": 1.0
+      },
+      "material": "air_shock",
+      "identity_features": [
+        "短黑色空气室",
+        "两端耳环",
+        "红色气阀帽",
+        "无外露螺旋弹簧"
+      ],
+      "weathering_prompt": "废旧空气避震以明显灰褐积尘、油泥、涂层擦伤、铝表面灰白氧化表现旧化，钢耳件和螺栓有锈斑。黑色气室呈灰暗哑光而非新品亮黑；调节钮仅保留暗淡颜色线索，禁止厚铁锈覆盖铝气室，也不增加螺旋弹簧。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出气室中段、红气阀帽或一个耳环",
+      "pose_hint": "嵌在窄缝中横卧",
+      "forbidden_changes": [
+        "按40cm摩托车后减震器尺寸生成",
+        "增加弹簧",
+        "将阳极氧化铝气室画成厚铁锈"
+      ]
+    },
+    {
+      "id": "S37",
+      "name": "黑色 DNM 长型山地车空气后避震",
+      "category": "减震器",
+      "reference_filename": "黑色 DNM 长型山地车空气后避震.png",
+      "reference_sha256": "1f26cd1a91d11a90e91594bfb33fb01e277765a1844d74752806441af4fdb236",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "气压减震器1.jpg",
+      "dimensions_mm": {
+        "端到端长": 240,
+        "气室外径": 45
+      },
+      "parts_mm": {
+        "安装中心距": 210,
+        "耳环孔径": 8,
+        "活塞杆直径": 12
+      },
+      "dimension_ranges_mm": {
+        "端到端长": [
+          210,
+          270
+        ]
+      },
+      "dimension_evidence": {
+        "status": "estimated_working_dimensions_not_measured",
+        "sources": [],
+        "note": "具体DNM型号未确认，240/210mm为独立工作选型。"
+      },
+      "size_policy": {
+        "reference_axis": "端到端长",
+        "reference_length_mm": 240,
+        "length_is_overall": true,
+        "cross_name": "气室外径",
+        "cross_mm": 45,
+        "render_scale": 0.3
+      },
+      "material": "air_shock",
+      "identity_features": [
+        "较长黑色气室与伸出杆段",
+        "红蓝调节钮",
+        "两端耳环",
+        "无外露弹簧"
+      ],
+      "weathering_prompt": "废旧空气避震以明显灰褐积尘、油泥、涂层擦伤、铝表面灰白氧化表现旧化，钢耳件和螺栓有锈斑。黑色气室呈灰暗哑光而非新品亮黑；调节钮仅保留暗淡颜色线索，禁止厚铁锈覆盖铝气室，也不增加螺旋弹簧。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出长气室或杆端与调节钮一部分",
+      "pose_hint": "沿薄钢件缝隙横放，耳环方向一致",
+      "forbidden_changes": [
+        "复制AERO短筒比例",
+        "增加外露弹簧",
+        "改成重型液压缸"
+      ]
+    },
+    {
+      "id": "S38",
+      "name": "黑蓝弹簧摩托车后减震器（带远端调节件）",
+      "category": "减震器",
+      "reference_filename": "黑蓝弹簧摩托车后减震器（带远端调节件）.png",
+      "reference_sha256": "059cc68bde6adbd04c2cf95d5dea603b97a16db02c58552c8f12ee0244e3f2c7",
+      "reference_image_size": [
+        1536,
+        1024
+      ],
+      "original_filename": "液压减震器.jpg",
+      "dimensions_mm": {
+        "最小安装孔中心距": 315,
+        "上安装套宽": 32
+      },
+      "parts_mm": {
+        "上安装孔直径": 12.7,
+        "下安装孔直径": 12.7,
+        "下安装套宽": 40
+      },
+      "dimension_ranges_mm": {
+        "最小安装孔中心距": [
+          315,
+          315
+        ]
+      },
+      "dimension_evidence": {
+        "status": "external_reference_corrected_2026-11-24",
+        "sources": [],
+        "note": "带远端调节件的 YSS 相似型号。孔距范围 315–325 mm，采用下限 315 mm。弹簧外径、端到端总长、调节头和软管未核实。"
+      },
+      "size_policy": {
+        "reference_axis": "最小安装孔中心距",
+        "reference_length_mm": 315,
+        "length_is_overall": false,
+        "cross_name": "上安装套宽",
+        "cross_mm": 32,
+        "render_scale": 1.0
+      },
+      "material": "mixed_shock",
+      "identity_features": [
+        "蓝色螺旋弹簧",
+        "黑色机体",
+        "下部叉形安装端",
+        "细软管连接蓝色远端调节件"
+      ],
+      "weathering_prompt": "报废减震器的钢弹簧和钢端件有明显掉漆、褐锈和油灰，弹簧缝积尘；铝件/镀铬杆有灰暗污膜、氧化擦伤，只有微弱反射。原有彩色残漆降低饱和度；橡胶护套和软管积灰油污、轻微老化但不生铁锈。不能保留崭新的彩色弹簧、亮黑新品外壳；保持圈距和连接。",
+      "prompt_text": "",
+      "prompt_note": "",
+      "exposure_hint": "露出数圈蓝色弹簧或安装端，远端调节件可以部分隐藏但连接关系保留",
+      "pose_hint": "侧卧；软管自然垂落或被轻压，不直线僵硬悬空",
+      "forbidden_changes": [
+        "按自行车短气压避震器尺寸生成",
+        "把远端调节头当独立第二件物体",
+        "橡胶管生锈"
+      ]
+    }
+  ]
+}

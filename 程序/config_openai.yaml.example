@@ -1,0 +1,15 @@
+# 复制为 config_openai.yaml（已被 git 忽略），或直接导出 OPENAI_API_KEY。
+# 不要把真实密钥写进仓库。
+api_key: ""
+base_url: "https://api.openai.com/v1"
+# Playground 现行模型：gpt-image-2、gpt-image-2.5-flare、gpt-image-2.5-sunburst、
+# gpt-image-2.6-flare、gpt-image-2.6-sunburst
+model: "gpt-image-2.6-flare"
+quality: "low"          # 2.5/2.6：auto / low / medium / high / xhigh / max；gpt-image-2 没有 xhigh、max
+complexity: "low"       # 只有 2.6 接受 low / medium / high；2 和 2.5 的调用函数不发送这项
+size: "1536x864"
+background: "opaque"    # auto / opaque / transparent
+output_format: "png"    # png / jpeg / webp
+moderation: "low"       # auto / low
+n: 1
+budget_usd: 5.0

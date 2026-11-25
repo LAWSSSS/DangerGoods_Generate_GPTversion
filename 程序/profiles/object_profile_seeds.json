@@ -1,0 +1,1307 @@
+{
+  "schema_version": "1.0",
+  "units": "mm",
+  "reference_root": "input/objects/six_views",
+  "background_root": "input/backgrounds",
+  "dimension_status_default": "estimated_working_dimensions_not_measured",
+  "objects": [
+    {
+      "id": "S01",
+      "reference": "红色 CCS 长型工业气瓶.png",
+      "name": "红色 CCS 长型工业气瓶",
+      "category": "气瓶",
+      "original": "气瓶1.jpg",
+      "material": "painted_steel",
+      "dimensions": {
+        "总高": 1450,
+        "瓶身外径": 219
+      },
+      "reference_axis": "总高",
+      "cross": "瓶身外径",
+      "primary_range": [
+        1450,
+        1450
+      ],
+      "parts": {
+        "瓶肩宽": 140,
+        "瓶帽高": 120
+      },
+      "features": [
+        "细长红色圆柱",
+        "圆肩与带开孔的保护帽",
+        "平直瓶身与圆底"
+      ],
+      "exposure": "露出带曲率的瓶身一段及瓶肩/保护帽之一，不要求整瓶显露",
+      "pose": "横卧或浅角度斜靠；保护帽随瓶体轴线",
+      "forbid": [
+        "按便携小气瓶尺寸生成",
+        "生成六只并排气瓶",
+        "把保护帽改成灭火器握把"
+      ],
+      "evidence_note": "外径 219 mm、含阀高度 1450 mm，对照 40 L 钢瓶公开参数（GB 5099）。",
+      "status": "public_specification"
+    },
+    {
+      "id": "S02",
+      "reference": "银色旋钮阀小型气瓶.png",
+      "name": "银色旋钮阀小型气瓶",
+      "category": "气瓶",
+      "original": "气瓶2.jpg",
+      "material": "stainless_steel",
+      "dimensions": {
+        "标称高度": 280,
+        "瓶体外径": 81.5
+      },
+      "reference_axis": "标称高度",
+      "cross": "瓶体外径",
+      "primary_range": [
+        280,
+        280
+      ],
+      "parts": {},
+      "features": [
+        "小型银色细长瓶体",
+        "黑色圆旋钮",
+        "侧向阀口与圆肩"
+      ],
+      "exposure": "露出银色瓶肩、阀头或瓶身中段",
+      "pose": "横放并被钢件止挡，阀头与主体连成一件",
+      "forbid": [
+        "套用40L工业钢瓶高度",
+        "生成为大型储罐",
+        "瓶体均匀红锈"
+      ],
+      "evidence_note": "相似产品替代。标称高度 280 mm、瓶体外径 81.5 mm；280 不能称为含阀总高。旋钮和阀头未核实，已移出生图约束。",
+      "length_is_overall": false,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S03",
+      "reference": "绿色 QL5 螺旋千斤顶.png",
+      "name": "绿色 QL5 螺旋千斤顶",
+      "category": "千斤顶",
+      "original": "千斤顶1.jpg",
+      "material": "painted_castiron",
+      "dimensions": {
+        "缩回主体高": 250,
+        "底座长": 178,
+        "底座宽": 150
+      },
+      "reference_axis": "缩回主体高",
+      "cross": "底座宽",
+      "primary_range": [
+        250,
+        380
+      ],
+      "parts": {
+        "托盘直径": 70,
+        "螺旋顶杆直径": 50,
+        "侧手柄长": 400
+      },
+      "features": [
+        "绿色锥形铸造机体",
+        "机械螺杆与圆托盘",
+        "侧插操作杆",
+        "圆形加筋底座"
+      ],
+      "exposure": "露出机体中段、托盘或底座边缘之一，操作杆可被遮住",
+      "pose": "侧卧或斜靠，保持缩回状态；独立手柄不另生成第二个主体",
+      "prompt_note": "绿漆大面积剥落，只剩暗绿残片，螺杆和机体都是旧锈件。",
+      "forbid": [
+        "改成红色液压瓶式结构",
+        "默认完全顶升",
+        "将长手柄作为机体尺寸测量目标"
+      ],
+      "evidence_note": "旧照片说明记载QL5与最低高度250mm；其它结构尺寸仍为参考设定。"
+    },
+    {
+      "id": "S04",
+      "reference": "红黄卧式轮式液压千斤顶.png",
+      "name": "红黄卧式轮式液压千斤顶",
+      "category": "千斤顶",
+      "original": "千斤顶2.jpg",
+      "material": "painted_steel",
+      "dimensions": {
+        "产品长": 622,
+        "产品宽": 242,
+        "产品高": 158,
+        "托盘最低高": 150
+      },
+      "reference_axis": "产品长",
+      "cross": "产品宽",
+      "primary_range": [
+        622,
+        622
+      ],
+      "parts": {},
+      "features": [
+        "低矮红色轮式机架",
+        "黄色提手/支架",
+        "黑色长操作杆",
+        "圆形顶升托盘"
+      ],
+      "exposure": "露出轮组和一段机架，长操作杆可跨越并被废料遮住",
+      "pose": "沿堆积面的近水平姿态；轮组/底架接触实物",
+      "forbid": [
+        "按立式瓶式千斤顶尺寸生成",
+        "额外复制手柄",
+        "把机架缩成小红瓶"
+      ],
+      "evidence_note": "相似 T83006XB。产品长 622 mm、宽 242 mm、高 158 mm；托盘最低高度取范围下限 150 mm。手柄、轮径和托盘直径未核实。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S05",
+      "reference": "红色 AESTAR 杀虫气雾罐.png",
+      "name": "红色 AESTAR 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "original": "杀虫剂罐2.jpg",
+      "material": "aerosol_can",
+      "dimensions": {
+        "成品单瓶高": 280,
+        "罐体外径": 65
+      },
+      "reference_axis": "成品单瓶高",
+      "cross": "罐体外径",
+      "primary_range": [
+        280,
+        280
+      ],
+      "parts": {},
+      "features": [
+        "红色细长金属气雾罐",
+        "红色一体喷盖",
+        "黄黑色标签块",
+        "圆形内凹罐底"
+      ],
+      "exposure": "露出红色罐体一段和喷盖/底部之一",
+      "pose": "横卧在缝隙中，罐底与前景废料产生遮挡",
+      "forbid": [
+        "画成灭火器",
+        "增加灭火器喷管或压力表",
+        "让塑料喷盖生锈"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "相似 600 ml 成品 280×65 mm，不是认定照片为该型号。喷盖高和卷边未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S06",
+      "reference": "紫粉色 Raid 杀虫气雾罐.png",
+      "name": "紫粉色 Raid 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "original": "杀虫剂罐1.jpg",
+      "material": "aerosol_can",
+      "dimensions": {
+        "含喷盖总高": 280,
+        "外部直径": 65
+      },
+      "reference_axis": "含喷盖总高",
+      "cross": "外部直径",
+      "primary_range": [
+        280,
+        280
+      ],
+      "parts": {},
+      "features": [
+        "紫粉色罐身",
+        "黑色斜口喷头",
+        "黄色品牌色块",
+        "细长直圆柱"
+      ],
+      "exposure": "露出紫粉色罐身和黑色喷头的一部分",
+      "pose": "侧卧或浅角度斜插，不悬浮",
+      "forbid": [
+        "改成榄菊蓝罐或AESTAR红罐",
+        "生成金属锈蚀的塑料喷头",
+        "增加软管"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "同品牌同系列商品尺寸 280×65 mm。喷盖高和卷边未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S07",
+      "reference": "黑色黄标双耳液压缸.png",
+      "name": "黑色黄标双耳液压缸",
+      "category": "液压缸",
+      "original": "液压缸2.jpg",
+      "material": "painted_steel_chrome",
+      "dimensions": {
+        "缩回含两耳总长": 640,
+        "缸筒外径": 73,
+        "缸头外径": 81
+      },
+      "reference_axis": "缩回含两耳总长",
+      "cross": "缸筒外径",
+      "primary_range": [
+        640,
+        640
+      ],
+      "parts": {
+        "外露杆直径": 35,
+        "耳孔直径": 30,
+        "缩回安装中心距": 570,
+        "杆端耳厚": 36,
+        "缸底耳厚": 30
+      },
+      "features": [
+        "黑色长圆缸筒",
+        "两端安装耳环",
+        "黄色标签环",
+        "侧向油口"
+      ],
+      "exposure": "露出缸筒一段、侧油口或一个耳环",
+      "pose": "缸轴沿钢件缝隙横卧或浅斜插",
+      "prompt_note": "黑漆磨掉，黄标污损，缸筒和杆布满油泥，不要新缸。",
+      "forbid": [
+        "生成带弹簧减震器",
+        "改成黑色喷雾瓶",
+        "切断耳环与缸体连接"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "ATO-HSG63300 主表：缩回总长 640 mm、缸筒外径 73 mm、耳孔 30 mm、外露杆 35 mm。耳环外径尺寸链有矛盾，未写入。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S08",
+      "reference": "黄色双耳液压缸（剖视参考）.png",
+      "name": "黄色双耳液压缸（剖视参考）",
+      "category": "液压缸",
+      "original": "液压缸1.jpg",
+      "material": "painted_steel_chrome",
+      "dimensions": {
+        "缩回含两耳总长": 580,
+        "缸筒外径": 90,
+        "缸头外径": 100
+      },
+      "reference_axis": "缩回含两耳总长",
+      "cross": "缸筒外径",
+      "primary_range": [
+        580,
+        580
+      ],
+      "parts": {
+        "耳孔直径": 40,
+        "缩回安装中心距": 500,
+        "外露短杆直径": 50,
+        "耳厚": 45
+      },
+      "features": [
+        "黄色圆形外筒",
+        "两端耳环",
+        "侧向油口",
+        "镀铬杆"
+      ],
+      "exposure": "露出黄色实体缸筒和一个安装端；参考剖视只用于理解内部结构",
+      "pose": "完整实体缸筒侧卧并与钢件卡住",
+      "forbid": [
+        "复制教学剖切窗口",
+        "生成透明缸筒",
+        "增加内部零件作为第二件异物"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "ATO-HSG80200 主表：缩回总长 580 mm、缸筒外径 90 mm、耳孔 40 mm、外露短杆 50 mm。油口和耳环外径未写入。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S09",
+      "reference": "红黑短型弹簧后减震器.png",
+      "name": "红黑短型弹簧后减震器",
+      "category": "减震器",
+      "original": "液压减震器2.jpg",
+      "material": "mixed_shock",
+      "dimensions": {
+        "安装孔中心距": 190,
+        "安装套宽": 24
+      },
+      "reference_axis": "安装孔中心距",
+      "cross": "安装套宽",
+      "primary_range": [
+        190,
+        190
+      ],
+      "parts": {
+        "安装孔直径": 8
+      },
+      "features": [
+        "短粗黑色螺旋弹簧",
+        "红色两端耳环和调节圈",
+        "金色内筒"
+      ],
+      "exposure": "露出连续的数圈弹簧及一个红色安装端",
+      "pose": "横卧或浅斜放，弹簧轴线保持连续",
+      "forbid": [
+        "套用长型摩托车减震器长度",
+        "生成大液压缸",
+        "增殖弹簧圈或断开耳环"
+      ],
+      "evidence_note": "相似 EXA Form 291R。只采用安装孔中心距 190 mm、安装套宽 24 mm、安装孔 8 mm。端到端总长和弹簧外径未核实。",
+      "length_is_overall": false,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S10",
+      "reference": "黑色长型摩托车弹簧减震器.png",
+      "name": "黑色长型摩托车弹簧减震器",
+      "category": "减震器",
+      "original": "液压减震器1.jpg",
+      "material": "mixed_shock",
+      "dimensions": {
+        "无载安装孔中心距": 320,
+        "弹簧外径": 53
+      },
+      "reference_axis": "无载安装孔中心距",
+      "cross": "弹簧外径",
+      "primary_range": [
+        320,
+        320
+      ],
+      "parts": {
+        "安装孔直径": 10,
+        "安装套宽": 19
+      },
+      "features": [
+        "细长黑色弹簧",
+        "上下耳环",
+        "黑色防尘护套",
+        "沿轴向一致的圈距"
+      ],
+      "exposure": "露出数圈弹簧和一个端部，另一端被覆盖",
+      "pose": "沿条形废钢横放",
+      "forbid": [
+        "改成无弹簧空气减震器",
+        "缩成短螺栓",
+        "把护套画成金属锈块"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "相似 HAGON 配置。无载孔距 320 mm，弹簧外径约 53 mm，安装套宽 19 mm。端到端总长和内杆未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S12",
+      "reference": "深绿色剖分式轴承座.png",
+      "name": "深绿色剖分式轴承座",
+      "category": "轴承座",
+      "original": "a轴承座1.jpg",
+      "material": "painted_castiron",
+      "dimensions": {
+        "底座总长": 275,
+        "座体轴向宽": 110,
+        "总高": 150,
+        "底座宽": 80
+      },
+      "reference_axis": "底座总长",
+      "cross": "座体轴向宽",
+      "render_scale": 0.8,
+      "primary_range": [
+        275,
+        275
+      ],
+      "parts": {
+        "安装孔中心距": 230,
+        "轴线高": 80,
+        "底脚厚": 30
+      },
+      "features": [
+        "深绿色剖分上盖",
+        "两侧夹紧螺栓",
+        "中部圆轴孔",
+        "两侧安装脚"
+      ],
+      "exposure": "露出上盖圆弧、轴孔边缘或一个带安装孔的脚",
+      "pose": "底座压在钢板上或侧躺，保持上下盖接缝",
+      "forbid": [
+        "套用ASAHI P210一体座精确尺寸",
+        "改成螺母",
+        "生成错误的完整滚珠轴承特写"
+      ],
+      "evidence_note": "采用 SN513 整组尺寸。总高 150 mm 与原值相符；底座长改为 275 mm，轴向宽 110 mm，孔距 230 mm。轴孔和螺栓头未核实。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S14",
+      "reference": "不锈钢立式管道过滤容器.png",
+      "name": "不锈钢立式管道过滤容器",
+      "category": "分离过滤器",
+      "original": "分离过滤器1.jpg",
+      "material": "stainless_steel",
+      "dimensions": {
+        "参考图示高度": 732,
+        "筒体外径": 90
+      },
+      "reference_axis": "参考图示高度",
+      "cross": "筒体外径",
+      "primary_range": [
+        732,
+        732
+      ],
+      "parts": {
+        "顶盖法兰外径": 185,
+        "接口端面跨度": 250
+      },
+      "features": [
+        "细长不锈钢筒体",
+        "顶部法兰",
+        "上部侧向法兰管",
+        "底部阀门与框形支架"
+      ],
+      "exposure": "露出筒壁和侧法兰/底部支架之一",
+      "pose": "筒轴沿钢件间隙横卧或浅斜靠，支架跟随主体",
+      "forbid": [
+        "画成药瓶或滤芯",
+        "丢掉侧法兰",
+        "均匀覆盖碳钢式厚红锈"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "近似 FGC1S 长款，参考图示高度约 732 mm、筒体外径 90 mm，不含原图支腿。原 700/170/120/160 未写入。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S15",
+      "reference": "DN25 蓝柄螺纹不锈钢球阀.png",
+      "name": "DN25 蓝柄螺纹不锈钢球阀",
+      "category": "阀门",
+      "material": "stainless_steel",
+      "dimensions": {
+        "阀体端面总长": 82,
+        "管路中心线至手柄顶": 70
+      },
+      "reference_axis": "阀体端面总长",
+      "cross": "管路中心线至手柄顶",
+      "render_scale": 0.2,
+      "primary_range": [
+        82,
+        82
+      ],
+      "parts": {
+        "阀杆轴线至手柄远端": 125
+      },
+      "features": [
+        "短螺纹阀体",
+        "蓝色长扳手柄",
+        "两端内螺纹",
+        "六视图DN25标记"
+      ],
+      "exposure": "露出蓝柄和部分六角阀体，螺纹口可被遮住",
+      "pose": "阀体被小钢件夹住，手柄自然沿表面方向",
+      "prompt_note": "钢体发乌有油污擦伤，蓝柄褪色积灰，不要亮新品。",
+      "forbid": [
+        "套用DN350大阀尺寸",
+        "生成法兰和大手轮",
+        "把蓝色塑料护柄画成铁锈"
+      ],
+      "evidence_note": "中驰 DN25 二片螺纹球阀。阀体端面总长 82 mm；125 mm 只是阀杆轴线到手端，不是整片手柄总长。阀体宽和含阀杆总高未核实。",
+      "length_is_overall": false,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S17",
+      "reference": "保赐利 400ml 自喷漆罐.png",
+      "name": "保赐利 400ml 自喷漆罐",
+      "category": "自喷漆罐",
+      "original": "自喷漆罐.jpg",
+      "material": "aerosol_can",
+      "dimensions": {
+        "含盖成品高": 200,
+        "成品外径": 65
+      },
+      "reference_axis": "含盖成品高",
+      "cross": "成品外径",
+      "primary_range": [
+        200,
+        200
+      ],
+      "parts": {},
+      "features": [
+        "白黄标签气雾罐",
+        "银色塑料罩盖",
+        "红色品牌色块",
+        "圆形内凹罐底"
+      ],
+      "exposure": "露出罐身色块和银色盖/罐底之一",
+      "pose": "侧卧于细钢件缝隙，避免聚焦展示标签",
+      "prompt_note": "标签磨花褪色，罐身油污，银盖发乌，不要新广告罐。",
+      "forbid": [
+        "生成600ml高杀虫罐",
+        "增加灭火器软管",
+        "让塑料盖生锈"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "相似 400 ml 成品 200×65 mm。盖的独立高度未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S18",
+      "reference": "青绿色立式小型压力储液罐.png",
+      "name": "青绿色立式小型压力储液罐",
+      "category": "储罐",
+      "original": "集油器2.jpg",
+      "material": "painted_steel",
+      "dimensions": {
+        "含上下阀总高": 511,
+        "筒体外径": 152
+      },
+      "reference_axis": "含上下阀总高",
+      "cross": "筒体外径",
+      "primary_range": [
+        511,
+        511
+      ],
+      "parts": {
+        "筒体高度": 430
+      },
+      "features": [
+        "青绿色细长筒体",
+        "上下阀组",
+        "黄色铭牌色块",
+        "两个侧向接头"
+      ],
+      "exposure": "露出青绿色筒壁和上阀/侧接头之一",
+      "pose": "横卧或浅角度斜插，阀组不凭空折断",
+      "forbid": [
+        "按16cm集油杯生成",
+        "改成灭火器握把",
+        "增添人孔或支腿"
+      ],
+      "evidence_note": "Henry S-9109 同一目录版本：含阀总高 511 mm、筒体外径 152 mm、筒体高 430 mm。阀件高和侧接头未核实。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S19",
+      "reference": "DN200 蓝手轮双法兰球阀.png",
+      "name": "DN200 蓝手轮双法兰球阀",
+      "category": "阀门",
+      "original": "aDN350 球阀1.jpg",
+      "material": "cast_steel",
+      "dimensions": {
+        "面对面长": 457,
+        "含手轮支脚总高": 650,
+        "法兰外径": 340
+      },
+      "reference_axis": "含手轮支脚总高",
+      "cross": "法兰外径",
+      "render_scale": 0.85,
+      "primary_range": [
+        550,
+        800
+      ],
+      "parts": {
+        "可见标称通径": 200,
+        "手轮直径": 300,
+        "支脚高": 80
+      },
+      "features": [
+        "球形中部阀体",
+        "双法兰",
+        "蓝色减速手轮",
+        "两条支脚"
+      ],
+      "exposure": "露出一部分球形阀体及法兰/手轮之一",
+      "pose": "侧倒或斜靠粗型钢，不由细铁丝支撑",
+      "forbid": [
+        "按DN350统一尺寸生成",
+        "改成长阀杆截止阀",
+        "把法兰画成薄喷雾罐底"
+      ],
+      "evidence_note": "面对面长度取 GB/T 12221 法兰球阀短系列 457 mm，低于长系列 600 mm。法兰外径 340 mm 为 DN200、PN16。含手轮总高仍是工作估计。",
+      "status": "face_to_face_and_flange_public_height_unverified"
+    },
+    {
+      "id": "S20",
+      "reference": "DN100 蓝手轮双法兰截止阀.png",
+      "name": "DN100 蓝手轮双法兰截止阀",
+      "category": "阀门",
+      "material": "cast_steel",
+      "dimensions": {
+        "面对面长": 292,
+        "含手轮总高": 430,
+        "法兰外径": 220
+      },
+      "reference_axis": "含手轮总高",
+      "cross": "法兰外径",
+      "render_scale": 0.85,
+      "primary_range": [
+        350,
+        550
+      ],
+      "parts": {
+        "六视图标称通径": 100,
+        "手轮直径": 220,
+        "阀杆直径": 25
+      },
+      "features": [
+        "蓝色水平手轮",
+        "升降阀杆/轭架",
+        "双侧法兰",
+        "六视图DN100字样"
+      ],
+      "exposure": "露出阀体、法兰或带轭架的手轮一部分",
+      "pose": "侧躺于钢板或大钢件之间",
+      "forbid": [
+        "套用DN350阀尺寸",
+        "改成蓝扳手螺纹小球阀",
+        "丢掉轭架"
+      ],
+      "evidence_note": "面对面长度取 GB/T 12221 截止阀短系列 292 mm，低于长系列 350 mm。法兰外径 220 mm 为 DN100、PN16。含手轮总高仍是工作估计。",
+      "status": "face_to_face_and_flange_public_height_unverified"
+    },
+    {
+      "id": "S21",
+      "reference": "DN350 蓝手轮大型角式阀.png",
+      "name": "DN350 蓝手轮大型角式阀",
+      "category": "阀门",
+      "original": "aDN350 球阀.jpg",
+      "material": "cast_steel",
+      "dimensions": {
+        "图示状态总高": 1415,
+        "接口法兰外径": 520
+      },
+      "reference_axis": "图示状态总高",
+      "cross": "接口法兰外径",
+      "render_scale": 0.9,
+      "primary_range": [
+        1415,
+        1415
+      ],
+      "parts": {
+        "手轮直径": 700,
+        "手轮左缘至侧法兰端面": 775
+      },
+      "features": [
+        "较长升降阀杆",
+        "蓝色水平手轮",
+        "侧向和下向接管",
+        "DN350字样"
+      ],
+      "exposure": "露出厚法兰、阀体弧面或长阀杆与手轮局部",
+      "pose": "大型报废阀侧倒，由厚钢板/型钢承担重量",
+      "forbid": [
+        "画成小型螺纹球阀",
+        "生成不符合角式接管的双向直通球阀",
+        "细铁丝托起整个阀"
+      ],
+      "evidence_note": "相似 DN350 PN16 角阀整组参数。图示状态总高 1415 mm（990+425），法兰外径 520 mm，手轮 700 mm。不再使用原先拆开的 1100/650/505/500。",
+      "status": "external_reference_corrected_2026-11-24",
+      "length_is_overall": true
+    },
+    {
+      "id": "S22",
+      "reference": "黑端盖铝型材气缸.png",
+      "name": "黑端盖铝型材气缸",
+      "category": "气缸",
+      "original": "气缸2.jpg",
+      "material": "aluminium_steel",
+      "dimensions": {
+        "缩回含杆端总长": 294,
+        "端盖宽": 75,
+        "端盖高": 75
+      },
+      "reference_axis": "缩回含杆端总长",
+      "cross": "端盖宽",
+      "primary_range": [
+        294,
+        294
+      ],
+      "parts": {
+        "外露杆直径": 20,
+        "后凸台直径": 45,
+        "后凸台突出": 4,
+        "安装孔中心距": 56.5
+      },
+      "features": [
+        "银色铝型材圆筒",
+        "黑色方端盖",
+        "杆端螺母",
+        "红白铭牌块"
+      ],
+      "exposure": "露出银色型材、黑端盖或短杆端",
+      "pose": "缸轴沿钢件间隙横放",
+      "prompt_note": "铝筒发乌有擦伤和油泥，黑端盖掉漆，铭牌污损，不要新气缸。",
+      "forbid": [
+        "套用125缸径的大拉杆缸尺寸",
+        "改成粗钢制油缸",
+        "将铝型材涂满红锈"
+      ],
+      "evidence_note": "相似 SI63×100 基本型缩回总长 294 mm，端盖 75×75 mm，外露杆 20 mm。行程不作为可见长度。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S23",
+      "reference": "灰端盖拉杆式气动缸.png",
+      "name": "灰端盖拉杆式气动缸",
+      "category": "气缸",
+      "original": "气缸.png",
+      "material": "aluminium_steel",
+      "dimensions": {
+        "缩回含杆端总长": 253,
+        "端盖宽": 75,
+        "端盖高": 75
+      },
+      "reference_axis": "缩回含杆端总长",
+      "cross": "端盖宽",
+      "primary_range": [
+        253,
+        253
+      ],
+      "parts": {
+        "外露杆直径": 20,
+        "安装孔中心距": 56
+      },
+      "features": [
+        "灰色方形端盖",
+        "四根外拉杆",
+        "银色缸体",
+        "绿色圆标"
+      ],
+      "exposure": "露出缸体一段和带拉杆的端盖",
+      "pose": "自然横卧，杆端不长距离悬空",
+      "prompt_note": "缸体和灰端盖是旧件，拉杆有锈和油泥，绿标发暗，不要新缸。",
+      "forbid": [
+        "混成黑端盖的大口径ARK缸",
+        "生成液压弹簧减震器",
+        "丢失拉杆结构"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "相似 SC63×100 基本型缩回总长 253 mm，端盖 75×75 mm，外露杆 20 mm。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S24",
+      "reference": "黑端盖大型 ARK 拉杆气缸.png",
+      "name": "黑端盖大型 ARK 拉杆气缸",
+      "category": "气缸",
+      "original": "气缸1.jpg",
+      "material": "aluminium_steel",
+      "dimensions": {
+        "缩回含杆端总长": 353,
+        "端盖宽": 136,
+        "端盖高": 136
+      },
+      "reference_axis": "缩回含杆端总长",
+      "cross": "端盖宽",
+      "primary_range": [
+        353,
+        353
+      ],
+      "parts": {
+        "外露杆直径": 32,
+        "安装孔中心距": 104
+      },
+      "features": [
+        "宽黑色端盖",
+        "四根粗外拉杆",
+        "银色缸筒",
+        "蓝白ARK铭牌块",
+        "较粗螺纹杆端"
+      ],
+      "exposure": "露出宽端盖与银色缸筒一段",
+      "pose": "由两处钢件支撑的横卧或浅斜姿态",
+      "prompt_note": "黑端盖掉漆积尘，缸体和拉杆发乌有油泥，不要新气缸。",
+      "forbid": [
+        "按63mm小气缸尺寸生成",
+        "丢失端盖宽度和粗拉杆",
+        "把标牌文字作为绝对外形尺寸"
+      ],
+      "evidence_note": "ARK 型号未确认，采用 SC125×150 相似配置。缩回总长 353 mm，端盖 136×136 mm，外露杆 32 mm。原 145 mm 行程未写入。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S25",
+      "reference": "白色 PP 广口带盖圆罐.png",
+      "name": "白色 PP 广口带盖圆罐",
+      "category": "密封胶罐",
+      "original": "密封胶罐.jpg",
+      "material": "plastic_pp",
+      "dimensions": {
+        "含盖总高": 108,
+        "最大外径": 95
+      },
+      "reference_axis": "含盖总高",
+      "cross": "最大外径",
+      "primary_range": [
+        108,
+        108
+      ],
+      "parts": {},
+      "features": [
+        "白色略锥形塑料罐身",
+        "宽平盖",
+        "小防拆扣",
+        "底部PP回收标记仅作材料线索"
+      ],
+      "exposure": "露出白色罐身的一部分和盖缘，保持一只容器",
+      "pose": "侧卧或斜靠薄钢件，允许轻微擦压但不任意融化",
+      "forbid": [
+        "让塑料长红褐铁锈",
+        "改成300ml密封胶胶筒",
+        "按名称推定20L大桶",
+        "复制两只并排罐"
+      ],
+      "evidence_note": "相似白色 PP 500 ml。含盖总高 108 mm，最大外径 95 mm。盖高未单独核实。",
+      "length_is_overall": true,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S26",
+      "reference": "GLORIA 6kg 红色带管灭火器.png",
+      "name": "GLORIA 6kg 红色带管灭火器",
+      "category": "灭火器",
+      "original": "灭火器.jpg",
+      "material": "fire_extinguisher",
+      "dimensions": {
+        "含阀总高": 500,
+        "筒体直径": 150
+      },
+      "reference_axis": "含阀总高",
+      "cross": "筒体直径",
+      "primary_range": [
+        500,
+        500
+      ],
+      "parts": {
+        "握把宽": 120,
+        "软管展开长": 600,
+        "压力表直径": 40
+      },
+      "features": [
+        "粗红色圆柱",
+        "红色握把",
+        "黑色弯曲软管",
+        "黑色底托",
+        "白红标签色块"
+      ],
+      "exposure": "露出粗红色筒壁和握把/软管一段",
+      "pose": "侧卧或浅斜靠，软管顺重力垂落并可局部压住",
+      "forbid": [
+        "按3kg小瓶或气雾罐尺寸生成",
+        "添加多余喷管",
+        "软管僵硬悬空或生锈"
+      ],
+      "evidence_note": "含阀总高 500 mm、筒径 150 mm，对照 GLORIA PD6GA 说明书。",
+      "status": "public_specification"
+    },
+    {
+      "id": "S28",
+      "reference": "MFZ／ABC3 红色 3kg 干粉灭火器.png",
+      "name": "MFZ/ABC3 红色 3kg 干粉灭火器",
+      "category": "灭火器",
+      "original": "灭火器2.jpg",
+      "material": "fire_extinguisher",
+      "dimensions": {
+        "含阀整机总高": 400,
+        "筒体外径": 130
+      },
+      "reference_axis": "含阀整机总高",
+      "cross": "筒体外径",
+      "primary_range": [
+        400,
+        400
+      ],
+      "parts": {
+        "筒体高度": 318
+      },
+      "features": [
+        "红色筒体",
+        "黑色握把",
+        "短喷嘴",
+        "黄色保险销",
+        "无GLORIA长软管"
+      ],
+      "exposure": "露出红色筒壁或阀头附近",
+      "pose": "横卧于缝隙，不直立在废钢顶上做产品展示",
+      "forbid": [
+        "套用6kg大灭火器尺寸",
+        "额外加长软管",
+        "改成绿色水基型"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "天博 MFZ/ABC3 参考品。成品总高 400 mm，筒体外径 130 mm，筒体高 318 mm。握把、压力表和喷嘴未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S29",
+      "reference": "红色 10t 瓶式液压千斤顶.png",
+      "name": "红色 10t 瓶式液压千斤顶",
+      "category": "千斤顶",
+      "original": "千斤顶.jpg",
+      "material": "painted_steel",
+      "dimensions": {
+        "缩回总高": 230,
+        "底座长": 123,
+        "底座宽": 110
+      },
+      "reference_axis": "缩回总高",
+      "cross": "底座长",
+      "primary_range": [
+        230,
+        230
+      ],
+      "parts": {},
+      "features": [
+        "红色瓶式机体",
+        "侧向泵柄插座",
+        "顶端圆托盘",
+        "四角底座"
+      ],
+      "exposure": "露出瓶体和托盘/底座一角，独立杆不作为第二件必投物品",
+      "pose": "自然侧躺或浅斜靠，保持未伸出或轻微伸出状态",
+      "prompt_note": "完全缩回。不要伸出活塞杆，不要另画操作杆。",
+      "forbid": [
+        "改成绿色机械螺旋千斤顶",
+        "生成轮式底盘",
+        "把独立操作杆纳入主体可见长度"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "TORIN T91004。缩回总高取高度范围下限 230 mm，底座 123×110 mm。瓶体外径和操作杆未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S30",
+      "reference": "绿色 3L 水基灭火器.png",
+      "name": "绿色 3L 水基灭火器",
+      "category": "灭火器",
+      "original": "灭火器1.jpg",
+      "material": "fire_extinguisher",
+      "dimensions": {
+        "成品总高": 420,
+        "筒体外径": 130
+      },
+      "reference_axis": "成品总高",
+      "cross": "筒体外径",
+      "primary_range": [
+        420,
+        420
+      ],
+      "parts": {},
+      "features": [
+        "绿色筒体和握把",
+        "黑色软管",
+        "黄保险销",
+        "白色标签块"
+      ],
+      "exposure": "露出绿色筒壁、握把或一段黑软管",
+      "pose": "侧卧并被废钢卡住，软管自然弯曲",
+      "forbid": [
+        "自动改成红色干粉瓶",
+        "按气雾罐大小生成",
+        "让黑色橡胶软管出现铁锈"
+      ],
+      "length_is_overall": true,
+      "evidence_note": "相似 3 L 绿色产品 130×420 mm。握把、软管和压力表未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S31",
+      "reference": "蓝色双法兰气液分离罐.png",
+      "name": "蓝色双法兰气液分离罐",
+      "category": "分离过滤器",
+      "original": "分离过滤器.jpg",
+      "material": "painted_steel",
+      "dimensions": {
+        "本体图示高": 600,
+        "罐体外径": 219
+      },
+      "reference_axis": "本体图示高",
+      "cross": "罐体外径",
+      "primary_range": [
+        600,
+        600
+      ],
+      "parts": {
+        "法兰端面跨度": 420
+      },
+      "features": [
+        "蓝色直圆筒",
+        "两侧对称法兰管",
+        "顶部吊环",
+        "底部排水器"
+      ],
+      "exposure": "露出蓝色筒壁与侧法兰/底排水器之一",
+      "pose": "沿钢件斜靠或侧卧，法兰口和筒体保持刚性连接",
+      "forbid": [
+        "画成小滤芯或集油杯",
+        "增加灭火器握把",
+        "把两侧法兰变成软管"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "相似 AS DN65。本体图示高 600 mm，不含另配排水器；罐体外径 219 mm，法兰端面跨度 420 mm。法兰盘外径未单列。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S32",
+      "reference": "蓝色榄菊 600ml 杀虫气雾罐.png",
+      "name": "蓝色榄菊 600ml 杀虫气雾罐",
+      "category": "杀虫剂罐",
+      "original": "杀虫剂罐.jpg",
+      "material": "aerosol_can",
+      "dimensions": {
+        "单瓶标称高": 280,
+        "罐体外径": 65
+      },
+      "reference_axis": "单瓶标称高",
+      "cross": "罐体外径",
+      "primary_range": [
+        280,
+        280
+      ],
+      "parts": {},
+      "features": [
+        "蓝色细长罐身",
+        "一体蓝色喷盖",
+        "黄色品牌色块与白花图案",
+        "圆内凹罐底"
+      ],
+      "exposure": "露出蓝色罐体和喷盖/罐底一部分",
+      "pose": "自然横卧或浅斜嵌入，尺寸仍为家用气雾罐",
+      "forbid": [
+        "画成蓝色工业钢瓶",
+        "改成红色或紫色杀虫罐",
+        "增加压力表和调压器"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "同品牌 600 ml 商品标称 280×65 mm。含喷盖口径未明确，喷盖高和卷边未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S33",
+      "reference": "带调压器蓝色便携气瓶.png",
+      "name": "带调压器蓝色便携气瓶",
+      "category": "气瓶",
+      "material": "painted_steel",
+      "dimensions": {
+        "气瓶标称高": 460,
+        "钢瓶外径": 140
+      },
+      "reference_axis": "气瓶标称高",
+      "cross": "钢瓶外径",
+      "primary_range": [
+        460,
+        460
+      ],
+      "parts": {},
+      "features": [
+        "蓝色中短瓶体",
+        "顶部调压器和圆压力表",
+        "侧向旋钮",
+        "无大型保护帽"
+      ],
+      "exposure": "露出瓶肩/瓶身和调压器或压力表局部",
+      "pose": "瓶体侧卧或斜靠，阀组不悬浮分离",
+      "forbid": [
+        "按40L长工业气瓶生成",
+        "改成灭火器",
+        "从多瓶拼图复制六个实例"
+      ],
+      "evidence_note": "CY-5-15 瓶体参考：标称高 460 mm、外径 140 mm。460 不是含调压器总高，调压器和压力表未核实。",
+      "length_is_overall": false,
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S34",
+      "reference": "深蓝色重型双耳液压油缸.png",
+      "name": "深蓝色重型双耳液压油缸",
+      "category": "油缸",
+      "original": "油缸.jpg",
+      "material": "painted_steel_chrome",
+      "dimensions": {
+        "推算总长": 1072,
+        "缸筒外径": 152
+      },
+      "reference_axis": "推算总长",
+      "cross": "缸筒外径",
+      "render_scale": 0.64,
+      "primary_range": [
+        1072,
+        1072
+      ],
+      "parts": {
+        "外露杆直径": 63,
+        "耳孔直径": 50,
+        "杆端耳外径": 120,
+        "杆端耳厚": 60,
+        "两耳中心距": 952
+      },
+      "features": [
+        "深蓝色厚缸筒",
+        "两端粗耳环",
+        "集成油路/阀块",
+        "一段镀铬活塞杆"
+      ],
+      "exposure": "露出粗蓝色筒壁、油路块或一个大耳环",
+      "pose": "由大块钢件两点支撑，近水平或浅斜靠",
+      "forbid": [
+        "缩成短套筒或喷漆罐",
+        "丢掉油路块",
+        "杆径按可见段长度同比变细"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "长茂 HSG125/63、500 行程。厂家未直接列总长；1072 mm 只按两耳均 R60 推算，不含顶部阀块。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S35",
+      "reference": "ASAHI P210 立式带座轴承.png",
+      "name": "ASAHI P210 立式带座轴承",
+      "category": "轴承座",
+      "original": "a轴承座.jpg",
+      "material": "painted_castiron",
+      "dimensions": {
+        "底座长": 206,
+        "底座宽": 60,
+        "总高": 114
+      },
+      "reference_axis": "底座长",
+      "cross": "总高",
+      "render_scale": 0.28,
+      "primary_range": [
+        206,
+        206
+      ],
+      "parts": {
+        "轴孔直径": 50,
+        "轴心高": 57.2,
+        "安装孔距": 159,
+        "轴承宽": 51.6
+      },
+      "features": [
+        "浅蓝色一体座体",
+        "P210和ASAHI可见型号线索",
+        "两侧长安装孔",
+        "银色轴承内圈",
+        "顶部油嘴"
+      ],
+      "exposure": "露出轴孔/座体圆弧和一个带孔安装脚",
+      "pose": "底座接触钢板或侧放，内圈不脱离座体",
+      "forbid": [
+        "按大型阀门大小生成",
+        "把座孔变成螺母孔",
+        "画成深绿色剖分上盖座"
+      ],
+      "status": "catalogue_reference_if_UCP210_identity_matches_not_instance_measurement",
+      "sources": [
+        "https://www.asahiseiko.co.jp/english/img/cata07_stand.pdf"
+      ]
+    },
+    {
+      "id": "S36",
+      "reference": "黑色 AERO 短型空气后减震器.png",
+      "name": "黑色 AERO 短型空气后减震器",
+      "category": "减震器",
+      "original": "气压减震器.jpg",
+      "material": "air_shock",
+      "dimensions": {
+        "安装孔中心距": 165,
+        "主气室外径": 48
+      },
+      "reference_axis": "安装孔中心距",
+      "cross": "主气室外径",
+      "primary_range": [
+        165,
+        165
+      ],
+      "parts": {
+        "安装孔直径": 8,
+        "安装套宽": 24
+      },
+      "features": [
+        "短黑色空气室",
+        "两端耳环",
+        "红色气阀帽",
+        "无外露螺旋弹簧"
+      ],
+      "exposure": "露出气室中段、红气阀帽或一个耳环",
+      "pose": "嵌在窄缝中横卧",
+      "forbid": [
+        "按40cm摩托车后减震器尺寸生成",
+        "增加弹簧",
+        "将阳极氧化铝气室画成厚铁锈"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "相似 KS EXAForm A5-RE。孔距 165 mm，主气室外径约 48 mm，安装套宽约 24 mm。端到端总长未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    },
+    {
+      "id": "S37",
+      "reference": "黑色 DNM 长型山地车空气后避震.png",
+      "name": "黑色 DNM 长型山地车空气后避震",
+      "category": "减震器",
+      "original": "气压减震器1.jpg",
+      "material": "air_shock",
+      "dimensions": {
+        "端到端长": 240,
+        "气室外径": 45
+      },
+      "reference_axis": "端到端长",
+      "cross": "气室外径",
+      "render_scale": 0.3,
+      "primary_range": [
+        210,
+        270
+      ],
+      "parts": {
+        "安装中心距": 210,
+        "耳环孔径": 8,
+        "活塞杆直径": 12
+      },
+      "features": [
+        "较长黑色气室与伸出杆段",
+        "红蓝调节钮",
+        "两端耳环",
+        "无外露弹簧"
+      ],
+      "exposure": "露出长气室或杆端与调节钮一部分",
+      "pose": "沿薄钢件缝隙横放，耳环方向一致",
+      "forbid": [
+        "复制AERO短筒比例",
+        "增加外露弹簧",
+        "改成重型液压缸"
+      ],
+      "evidence_note": "具体DNM型号未确认，240/210mm为独立工作选型。"
+    },
+    {
+      "id": "S38",
+      "reference": "黑蓝弹簧摩托车后减震器（带远端调节件）.png",
+      "name": "黑蓝弹簧摩托车后减震器（带远端调节件）",
+      "category": "减震器",
+      "original": "液压减震器.jpg",
+      "material": "mixed_shock",
+      "dimensions": {
+        "最小安装孔中心距": 315,
+        "上安装套宽": 32
+      },
+      "reference_axis": "最小安装孔中心距",
+      "cross": "上安装套宽",
+      "primary_range": [
+        315,
+        315
+      ],
+      "parts": {
+        "上安装孔直径": 12.7,
+        "下安装孔直径": 12.7,
+        "下安装套宽": 40
+      },
+      "features": [
+        "蓝色螺旋弹簧",
+        "黑色机体",
+        "下部叉形安装端",
+        "细软管连接蓝色远端调节件"
+      ],
+      "exposure": "露出数圈蓝色弹簧或安装端，远端调节件可以部分隐藏但连接关系保留",
+      "pose": "侧卧；软管自然垂落或被轻压，不直线僵硬悬空",
+      "forbid": [
+        "按自行车短气压避震器尺寸生成",
+        "把远端调节头当独立第二件物体",
+        "橡胶管生锈"
+      ],
+      "length_is_overall": false,
+      "evidence_note": "带远端调节件的 YSS 相似型号。孔距范围 315–325 mm，采用下限 315 mm。弹簧外径、端到端总长、调节头和软管未核实。",
+      "status": "external_reference_corrected_2026-11-24"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Secrets
+config_openai.yaml
+.env
+.env.*
+
+# Generated outputs
+output/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+work/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Debug payloads with signed URLs
+debug_response.json
+*.egg-info/
+build/
+dist/
